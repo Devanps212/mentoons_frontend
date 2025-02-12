@@ -9,11 +9,15 @@ import {
 } from "react-icons/fa";
 
 const ICONS: { [key: string]: JSX.Element } = {
-  games: <FaGamepad className="text-white text-lg" />,
-  comics: <FaBook className="text-white text-lg" />,
-  products: <FaShoppingCart className="text-white text-lg" />,
-  services: <FaCog className="text-white text-lg" />,
-  subscription: <FaUserShield className="text-white text-lg" />,
+  games: <FaGamepad className="text-white text-[12px] sm:text-sm md:text-lg" />,
+  comics: <FaBook className="text-white text-[12px] sm:text-sm md:text-lg" />,
+  products: (
+    <FaShoppingCart className="text-white text-[12px] sm:text-sm md:text-lg" />
+  ),
+  services: <FaCog className="text-white text-[12px] sm:text-sm md:text-lg" />,
+  subscription: (
+    <FaUserShield className="text-white text-[12px] sm:text-sm md:text-lg" />
+  ),
 };
 
 const NavButton = ({
@@ -34,8 +38,8 @@ const NavButton = ({
       onMouseEnter={() => onMouseEnter(menuKey)}
       onMouseLeave={() => onMouseLeave(menuKey)}
     >
-      <button className="bg-transparent outline-none text-center text-base font-semibold text-white flex items-center gap-2">
-        {ICONS[menuKey]}
+      <button className="bg-transparent outline-none text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1">
+        <span className="hidden sm:block">{ICONS[menuKey]}</span>
         {label}
       </button>
       <AnimatePresence>{children}</AnimatePresence>

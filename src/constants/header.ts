@@ -9,7 +9,7 @@ export const PRODUCTS = [
   "Conversation Story Card",
 ];
 
-export const SERVICES = ["One-One-One", "Workshops", "Assessments"];
+export const SERVICES = ["One-to-One", "Workshops", "Assessments"];
 
 export const SUBSCRIPTION = ["Podcast", "News"];
 

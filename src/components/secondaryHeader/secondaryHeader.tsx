@@ -8,7 +8,7 @@ import {
 } from "../../constants";
 import DropDown from "../dropDown/dropDown";
 import NavButton from "../nav/button";
-import { FaPhone, FaRegCalendarAlt, FaUser } from "react-icons/fa";
+import { FaPhone, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { DropDownInterface } from "../../types";
 
@@ -45,10 +45,7 @@ const SecondaryHeader = () => {
         isScrolled ? "fixed w-full top-0 left-0 shadow-md" : "relative"
       } flex justify-between items-center bg-[#EC9600] max-w-screen-full h-20 px-4 md:px-10 transition-all duration-300 z-50`}
     >
-      <div className="w-1/2 md:w-1/3 lg:w-1/2 flex justify-center items-center gap-3 md:gap-4">
-        <div className="bg-white text-[10px] md:text-[12px] font-semibold rounded-full px-2 md:px-3 py-1 hidden xl:flex justify-center items-center gap-2 text-[#EC9600]">
-          <FaRegCalendarAlt /> <span>09 DECEMBER 2025</span>
-        </div>
+      <div className="w-1/2 md:w-1/3 lg:w-1/2 flex justify-center items-center gap-3 md:gap-10">
         <div className="bg-white text-[10px] md:text-[12px] font-semibold rounded-full px-2 md:px-3 py-1 hidden xl:flex justify-center items-center gap-2 text-[#EC9600]">
           <FaPhone /> <span>Call us: +91 90360 33300</span>
         </div>

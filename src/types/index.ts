@@ -3,6 +3,7 @@ import {
   RequestInterface,
   GameData,
   DropDownInterface,
+  Community,
 } from "./interfaces";
 import { Color } from "./types";
 
@@ -12,4 +13,5 @@ export type {
   GameData,
   DropDownInterface,
   Color,
+  Community,
 };

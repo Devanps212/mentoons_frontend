@@ -1,6 +1,6 @@
 import { GameData } from "../types";
 
-export const COMICS = ["Comic 1", "Comic 2", "Comic 3"];
+export const COMICS = ["6 -12", "13-16", "17-19", "20+"];
 
 export const PRODUCTS = [
   "Conversation Starter",
@@ -9,7 +9,7 @@ export const PRODUCTS = [
   "Conversation Story Card",
 ];
 
-export const SERVICES = ["One-to-One", "Workshops", "Assessments"];
+export const SERVICES = ["One-on-One", "Workshops", "Assessments"];
 
 export const SUBSCRIPTION = ["Podcast", "News"];
 

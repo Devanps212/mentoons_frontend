@@ -28,3 +28,8 @@ export interface DropDownInterface {
   subscription: boolean;
 }
 
+export interface Community {
+  title: string;
+  description: string;
+  color: string;
+}

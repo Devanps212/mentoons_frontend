@@ -1,16 +1,17 @@
 import AddaHomeSection from "../components/addaSection/addaHomeSection";
 import Banner from "../components/banner/banner";
-// import ContentSafety from "../components/contentSafety/contentSafety";
+import FounderNote from "../components/founderNote/founderNote";
+import Community from "../components/mentoonsCommunity/communityHome/community";
 
 const Home = () => {
   return (
     <>
-      <div className="relative px-20 py-10 h-auto">
-        <div className="absolute top-0 left-90 w-96 h-auto bg-yellow-500 rounded-full -translate-x-1/2 blur-3xl opacity-50"></div>
+      <div className="relative py-10 h-auto">
+        <div className="absolute top-0 left-1/4 w-[729.07px] h-[1943.73px] bg-[#FFE0BA] rounded-full -translate-x-1/2 blur-3xl z-[-1]"></div>
         <Banner />
-        <div className="px-20">
-          <AddaHomeSection />
-        </div>
+        <AddaHomeSection />
+        <Community />
+        <FounderNote />
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import Adda from "./pages/adda";
 import PrimaryHeader from "./components/primaryHeader/primaryHeader";
 import Home from "./pages/home";
 import SecondaryHeader from "./components/secondaryHeader/secondaryHeader";
+import "./app.css";
 
 function App() {
   return (

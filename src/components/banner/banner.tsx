@@ -2,7 +2,13 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <section className="h-screen flex flex-col justify-start sm:justify-center items-center gap-12 p-6 relative">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="h-screen flex flex-col justify-start sm:justify-center items-center gap-12 px-12 p-6 sm:p-6 relative"
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -71,7 +77,7 @@ const Banner = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
         className="absolute bottom-5 left-10 hidden md:block md:w-48 lg:w-auto"
       />
-    </section>
+    </motion.section>
   );
 };
 

@@ -29,12 +29,13 @@ const PrimaryHeader = () => {
 
       <div className="w-1/2 md:w-1/4 overflow-hidden py-2 flex items-center justify-center">
         <motion.div
-          className="flex gap-20 whitespace-nowrap"
-          animate={{ x: ["80%", "-100%"] }}
+          className="flex gap-15 whitespace-nowrap"
+          initial={{ x: "58%" }}
+          animate={{ x: "-58%" }}
           transition={{
             repeat: Infinity,
             repeatType: "loop",
-            duration: 45,
+            duration: 35,
             ease: "linear",
           }}
         >

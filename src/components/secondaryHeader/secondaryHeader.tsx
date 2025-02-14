@@ -46,9 +46,11 @@ const SecondaryHeader = () => {
       } flex justify-between items-center bg-[#EC9600] max-w-screen-full h-20 px-4 md:px-10 transition-all duration-300 z-50`}
     >
       <div className="w-1/2 md:w-1/3 lg:w-1/2 flex justify-center items-center gap-3 md:gap-10">
-        <div className="bg-white text-[10px] md:text-[12px] font-semibold rounded-full px-2 md:px-3 py-1 hidden xl:flex justify-center items-center gap-2 text-[#EC9600]">
-          <FaPhone /> <span>Call us: +91 90360 33300</span>
-        </div>
+        <a href="tel:+919036033300" className="no-underline">
+          <div className="bg-white text-[10px] md:text-[12px] font-semibold rounded-full px-2 md:px-3 py-1 hidden xl:flex justify-center items-center gap-2 text-[#EC9600]">
+            <FaPhone /> <span>Call us: +91 90360 33300</span>
+          </div>
+        </a>
         <NavButton
           label="Comics"
           onMouseEnter={() => handleHover("comics")}

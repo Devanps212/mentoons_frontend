@@ -5,6 +5,8 @@ import { ANIMATION_TEXTS } from "./primaryHeader";
 import { COMMUNITY } from "./community";
 import { CONSTESTS } from "./contests";
 import { FAQ } from "./faq";
+import { FREECOMICS, FREEAUDIOCOMICS } from "./freeComics";
+import { PODCAST } from "./podcast";
 
 export {
   FRIEND_REQUEST,
@@ -18,4 +20,7 @@ export {
   COMMUNITY,
   CONSTESTS,
   FAQ,
+  FREECOMICS,
+  FREEAUDIOCOMICS,
+  PODCAST,
 };

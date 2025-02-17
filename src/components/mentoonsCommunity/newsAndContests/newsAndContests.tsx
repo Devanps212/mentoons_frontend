@@ -1,23 +1,28 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { MagnifyingGlass } from "react-loader-spinner";
 import Contests from "../contests/contests";
+import FreeComics from "../freeComics/freeComics";
 
 const NewsAndContests = () => {
-  const [activeTab, setActiveTab] = useState("Mentoons news");
-  const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState("Mentoons Comics");
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedComicType, setSelectedComicType] = useState<
+    "picture" | "audio"
+  >("picture");
 
   useEffect(() => {
-    if (activeTab === "contests | Fun Section") {
-      setIsLoading(false);
-    }
-  }, [activeTab]);
+    setIsLoading(true);
+    setTimeout(() => setIsLoading(false), 500);
+
+    console.log(selectedComicType);
+  }, [activeTab, selectedComicType]);
 
   return (
     <div className="w-1/3 h-[500px] border bg-white rounded-xl overflow-hidden shadow-lg">
       <div className="flex w-full relative flex-col">
         <div className="flex w-full">
-          {["contests | Fun Section", "Mentoons news"].map((tab) => (
+          {["Mentoons Comics", "Contests | Fun Section"].map((tab) => (
             <motion.button
               key={tab}
               onClick={() => {
@@ -38,7 +43,16 @@ const NewsAndContests = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {tab}
+              {tab === "Mentoons Comics" ? (
+                <>
+                  <span>{tab}</span>
+                  <span className="absolute top-1 right-3 bg-red-500 text-white text-[10px] rounded-full px-2 py-1">
+                    Free
+                  </span>
+                </>
+              ) : (
+                tab
+              )}
               {activeTab === tab && (
                 <motion.div
                   layoutId="underline"
@@ -48,30 +62,34 @@ const NewsAndContests = () => {
             </motion.button>
           ))}
         </div>
-        <AnimatePresence>
-          {activeTab === "Mentoons news" && (
-            <motion.div
-              key="subscribe-button"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="w-full text-center bg-white py-2 border-b"
+        {activeTab === "Mentoons Comics" && (
+          <div className="flex justify-start items-start">
+            <button
+              onClick={() => setSelectedComicType("picture")}
+              className={`px-3 py-2 font-semibold shadow-md transition-all duration-300 ${
+                selectedComicType === "picture"
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-300 text-gray-800"
+              }`}
             >
-              <a
-                href="https://mentoonsnews.com/subscribe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-semibold hover:underline"
-              >
-                Subscribe Now
-              </a>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              Picture Comic
+            </button>
+            <button
+              onClick={() => setSelectedComicType("audio")}
+              className={`px-3 py-2 font-semibold shadow-md transition-all duration-300 ${
+                selectedComicType === "audio"
+                  ? "bg-green-500 text-white"
+                  : "bg-gray-300 text-gray-800"
+              }`}
+            >
+              Audio Comic
+            </button>
+            <div></div>
+          </div>
+        )}
       </div>
       <div className="w-full h-[445px] relative overflow-hidden">
-        {isLoading && (
+        {isLoading ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
             <MagnifyingGlass
               visible={true}
@@ -83,20 +101,15 @@ const NewsAndContests = () => {
             />
             <p className="akshar">Loading ...</p>
           </div>
+        ) : (
+          <div className="w-full p-6 max-h-full overflow-auto">
+            {activeTab === "Mentoons Comics" ? (
+              <FreeComics comicType={selectedComicType} />
+            ) : (
+              <Contests />
+            )}
+          </div>
         )}
-
-        <div className="w-full h-full overflow-hidden">
-          {activeTab === "Mentoons news" ? (
-            <iframe
-              src="https://mentoonsnews.com/"
-              className="w-full h-full border-none overflow-hidden"
-              style={{ overflowX: "hidden" }}
-              onLoad={() => setIsLoading(false)}
-            ></iframe>
-          ) : (
-            <Contests />
-          )}
-        </div>
       </div>
     </div>
   );

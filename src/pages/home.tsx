@@ -1,7 +1,7 @@
 import AddaHomeSection from "../components/addaSection/addaHomeSection";
 import Banner from "../components/banner/banner";
-import FounderNote from "../components/founderNote/founderNote";
 import Community from "../components/mentoonsCommunity/communityHome/community";
+import NewsSubscription from "../components/newsSubscription/newsSubscription";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         <Banner />
         <AddaHomeSection />
         <Community />
-        <FounderNote />
+        <NewsSubscription />
       </div>
     </>
   );

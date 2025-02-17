@@ -33,3 +33,9 @@ export interface Community {
   description: string;
   color: string;
 }
+
+export interface Comics {
+  _id: string;
+  title: string;
+  image: string;
+}

@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 import { FaClock, FaUser } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
-import { MdWeekend } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { ANIMATION_TEXTS } from "../../constants";
 
 const PrimaryHeader = () => {
   return (
-    <div className="flex justify-between items-center bg-gray-600 w-full text-white px-5 font-light">
-      <div className="flex justify-center gap-5 md:gap-15 w-auto md:1/3 lg:w-1/2 py-2">
+    <div className="flex justify-around items-center bg-gray-600 w-full text-white px-5 font-light">
+      <div className="flex justify-start gap-5 md:gap-15 w-auto md:1/3 lg:w-1/2 py-2">
         <div className="block md:hidden relative cursor-pointer py-2">
           <FaMessage />
           <span className="absolute -top-0 -right-4 px-2 rounded-full bg-yellow-400 text-xs text-black text-center">
@@ -19,11 +18,6 @@ const PrimaryHeader = () => {
           <FaClock className="hidden sm: block" />
           <h3>Monday - Saturday</h3>
           <span>10:00 - 8:00</span>
-        </div>
-        <div className="hidden md:inline-flex items-center whitespace-nowrap gap-0 sm:gap-2 text-[10px] md:text-xs lg:text-sm xl:text-base">
-          <MdWeekend className="hidden sm: block" />
-          <h3>Sunday</h3>
-          <span>Weekend</span>
         </div>
       </div>
 
@@ -52,7 +46,7 @@ const PrimaryHeader = () => {
         </motion.div>
       </div>
 
-      <div className="flex justify-center items-center gap-10 w-auto md:w-1/2">
+      <div className="flex justify-end items-end gap-10 w-auto md:w-1/2">
         <div className="relative cursor-pointer py-2 hidden md:block">
           <FaMessage />
           <span className="absolute -top-0 -right-4 px-2 rounded-full bg-yellow-400 text-xs text-black text-center">

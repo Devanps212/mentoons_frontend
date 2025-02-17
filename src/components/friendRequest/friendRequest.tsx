@@ -6,6 +6,8 @@ const FriendRequest = () => {
   const [requests, setRequests] = useState<RequestInterface[] | null>(
     FRIEND_REQUEST
   );
+  
+  setRequests(null) //remove
 
   return (
     <div className="flex flex-col items-center p-4 mt-10">

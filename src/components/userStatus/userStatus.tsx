@@ -7,12 +7,16 @@ import axios, { AxiosError } from "axios";
 const UserStatus = () => {
   const [statuses, setStatuses] = useState<UserStatusInterface[]>(STATUSES);
 
+  setStatuses(STATUSES); //remove
+
   useEffect(() => {
     const fetchUserStatus = async () => {
       try {
         const userData = await axios.get(
           `${import.meta.env.VITE_BASE_URL}/api/user/status`
         );
+
+        console.log(userData);
         // setStatuses(userData.data);
       } catch (error: unknown) {
         if (error instanceof AxiosError) {

@@ -1,4 +1,4 @@
-import "./AddaTV.css";
+import "./addaTV.css";
 
 const AddaTV = () => {
   return (

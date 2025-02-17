@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { MagnifyingGlass } from "react-loader-spinner";
+import { ClipLoader } from "react-spinners";
 import Contests from "../contests/contests";
 import FreeComics from "../freeComics/freeComics";
 
@@ -91,14 +91,7 @@ const NewsAndContests = () => {
       <div className="w-full h-[445px] relative overflow-hidden">
         {isLoading ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
-            <MagnifyingGlass
-              visible={true}
-              height="80"
-              width="80"
-              ariaLabel="magnifying-glass-loading"
-              glassColor="#c0efff"
-              color="#e15b64"
-            />
+            <ClipLoader color="#36d7b7" loading={true} size={50} />
             <p className="akshar">Loading ...</p>
           </div>
         ) : (

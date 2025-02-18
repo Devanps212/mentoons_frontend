@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FRIEND_REQUEST } from "../../constants";
 import { RequestInterface } from "../../types";
 
@@ -6,8 +6,10 @@ const FriendRequest = () => {
   const [requests, setRequests] = useState<RequestInterface[] | null>(
     FRIEND_REQUEST
   );
-  
-  setRequests(null) //remove
+
+  useEffect(() => {
+    setRequests(FRIEND_REQUEST); //remove
+  }, []);
 
   return (
     <div className="flex flex-col items-center p-4 mt-10">

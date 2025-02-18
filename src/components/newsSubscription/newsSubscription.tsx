@@ -15,7 +15,7 @@ const NewsSubscription = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.7 }}
     >
       <motion.div
         ref={sectionRef}
@@ -58,7 +58,7 @@ const NewsSubscription = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-center font-semibold text-[48px] lg:text-[72px] leading-tight text-gray-800">
-          MENTOONS PODCASTS
+          Mentoons Podcasts
         </h1>
         <Podcast />
       </motion.div>

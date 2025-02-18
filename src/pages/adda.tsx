@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import Birthday from "../components/birthdayCard/birthday";
 import FriendRequest from "../components/friendRequest/friendRequest";
 import Meme from "../components/memeOfTheDay/meme";
 import UserStatus from "../components/userStatus/userStatus";
 
 const Adda = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="flex justify-evenly items-start w-full pt-12">

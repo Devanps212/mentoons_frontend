@@ -84,13 +84,13 @@ const SecondaryHeader = () => {
         >
           {dropdown.services && <DropDown alignLeft={true} items={SERVICES} />}
         </NavButton>
-        <Link
-          to="#subscription"
+        <a
+          href="#subscription"
           className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
         >
           <FaCreditCard className="hidden sm:block sm:text-sm md:text-lg" />
           Browse Plans
-        </Link>
+        </a>
 
         <FaUser className="text-white bg-[#500EAD] rounded-full cursor-pointer p-1 md:p-2 lg:p-2 w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9" />
       </div>

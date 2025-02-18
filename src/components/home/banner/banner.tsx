@@ -19,7 +19,7 @@ const Banner = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="font-medium text-[50px] sm:text-[58px] md:text-[70px] lg:text-[86px] text-black leading-tight whitespace-nowrap text-center"
+          className="font-medium text-[45px] xs:text-[50px] sm:text-[58px] md:text-[70px] lg:text-[86px] p-6 xs:p-0 text-black leading-tight whitespace-nowrap text-center"
         >
           Welcome to <span className="text-[#EC9600]">Mentoons</span>
         </motion.h1>

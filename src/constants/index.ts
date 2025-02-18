@@ -7,6 +7,7 @@ import { CONSTESTS } from "./contests";
 import { FAQ } from "./faq";
 import { FREECOMICS, FREEAUDIOCOMICS } from "./freeComics";
 import { PODCAST } from "./podcast";
+import { PLATINUM, PRIME } from "./membership";
 
 export {
   FRIEND_REQUEST,
@@ -23,4 +24,6 @@ export {
   FREECOMICS,
   FREEAUDIOCOMICS,
   PODCAST,
+  PRIME,
+  PLATINUM,
 };

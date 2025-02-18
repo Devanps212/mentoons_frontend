@@ -15,7 +15,7 @@ const Community = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="pt-4 w-full h-auto bg-gradient-to-r from-[rgba(255,187,68,0.7)] to-[rgba(253,185,147,0.7)] p-20"
     >
-      <h1 className="text-xl text-[48px] font-semibold">Mentoons Community</h1>
+      <h1 className="text-[48px] font-semibold">Mentoons Community</h1>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={isInView ? { opacity: 1, scale: 1 } : {}}

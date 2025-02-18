@@ -17,18 +17,19 @@ const AddaHomeSection = () => {
   };
 
   return (
-    <section
+    <motion.section
       ref={sectionRef}
-      className={`flex justify-start items-center gap-8 bg-transparent py-23 p-20 transition-opacity duration-500 ${
-        isInView ? "opacity-100" : "opacity-0"
-      }`}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex justify-start items-center gap-8 bg-transparent py-23 p-20"
     >
       <div className="flex flex-col justify-start items-start gap-2">
         <motion.h1
           initial={{ opacity: 0, x: -80, scale: 0.8 }}
           animate={isInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", type: "spring" }}
-          className="text-[64px] font-bold text-[#EC9600]"
+          className="text-[37px] sm:text-[45px] md:text-[50px] lg:text-[64px] font-bold text-[#EC9600]"
         >
           Mentoons Adda
         </motion.h1>
@@ -38,8 +39,8 @@ const AddaHomeSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
         >
-          <h6 className="font-medium text-[27px]">/ˈʌdə,ˈadə/</h6>
-          <div className="flex gap-2 text-[23.4px] italic inter">
+          <h6 className="font-medium md:text-md lg:text-[27px]">/ˈʌdə,ˈadə/</h6>
+          <div className="flex gap-2 md:text-md lg:text-[23.4px] italic inter">
             <span>noun</span>
             <span>Indian</span>
           </div>
@@ -49,7 +50,7 @@ const AddaHomeSection = () => {
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-          className="font-semibold text-[28px] w-auto pt-5"
+          className="font-semibold md:text-[20px] lg:text-[28px] w-auto pt-5"
         >
           A place for parents and children to gather and have meaningful
           interactions and strike conversations.
@@ -144,7 +145,7 @@ const AddaHomeSection = () => {
       >
         <AddaTV />
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -3,7 +3,7 @@ import AddaTV from "../addaTV/addaTV";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
-import { FAQ } from "../../constants";
+import { FAQ } from "../../../constants";
 
 const AddaHomeSection = () => {
   const sectionRef = useRef(null);

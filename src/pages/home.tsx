@@ -1,8 +1,8 @@
-import AddaHomeSection from "../components/addaSection/addaHomeSection";
-import Banner from "../components/banner/banner";
-import Footer from "../components/footer/footer";
-import Community from "../components/mentoonsCommunity/communityHome/community";
-import NewsSubscription from "../components/newsSubscription/newsSubscription";
+import AddaHomeSection from "../components/home/addaSection/addaHomeSection";
+import Banner from "../components/home/banner/banner";
+import Footer from "../components/home/footer/footer";
+import Community from "../components/home/mentoonsCommunity/communityHome/community";
+import NewsSubscription from "../components/home/newsSubscription/newsSubscription";
 
 const Home = () => {
   return (

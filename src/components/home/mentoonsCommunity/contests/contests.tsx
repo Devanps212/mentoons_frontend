@@ -1,4 +1,4 @@
-import { CONSTESTS } from "../../../constants";
+import { CONSTESTS } from "../../../../constants";
 
 const Contests = () => {
   return (

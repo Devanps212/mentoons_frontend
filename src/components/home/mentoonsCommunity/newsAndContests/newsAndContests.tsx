@@ -72,7 +72,7 @@ const NewsAndContests = () => {
                   : "bg-gray-300 text-gray-800"
               }`}
             >
-              Picture Comic
+              Illustrated Comic
             </button>
             <button
               onClick={() => setSelectedComicType("audio")}
@@ -82,7 +82,7 @@ const NewsAndContests = () => {
                   : "bg-gray-300 text-gray-800"
               }`}
             >
-              Audio Comic
+              Illustrated Audio Comic
             </button>
             <div></div>
           </div>

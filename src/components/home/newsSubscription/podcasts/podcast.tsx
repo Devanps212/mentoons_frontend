@@ -1,5 +1,5 @@
 import { FaPlayCircle } from "react-icons/fa";
-import { PODCAST } from "../../../constants";
+import { PODCAST } from "../../../../constants";
 import { motion } from "framer-motion";
 
 const Podcast = () => {

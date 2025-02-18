@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import Birthday from "../components/birthdayCard/birthday";
-import FriendRequest from "../components/friendRequest/friendRequest";
-import Meme from "../components/memeOfTheDay/meme";
-import UserStatus from "../components/userStatus/userStatus";
+import Birthday from "../components/adda/birthdayCard/birthday";
+import FriendRequest from "../components/adda/friendRequest/friendRequest";
+import Meme from "../components/adda/memeOfTheDay/meme";
+import UserStatus from "../components/adda/userStatus/userStatus";
 
 const Adda = () => {
   useEffect(() => {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { UserStatusInterface } from "../../types";
+import { UserStatusInterface } from "../../../types";
 import { FaPlus } from "react-icons/fa";
-import { STATUSES } from "../../constants";
+import { STATUSES } from "../../../constants";
 // import axios, { AxiosError } from "axios";
 
 const UserStatus = () => {

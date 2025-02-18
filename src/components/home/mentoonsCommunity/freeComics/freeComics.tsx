@@ -1,9 +1,9 @@
 // import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 // import { API } from "../../../config/configFile";
-import { Comics } from "../../../types";
+import { Comics } from "../../../../types";
 import { Link } from "react-router-dom";
-import { FREECOMICS, FREEAUDIOCOMICS } from "../../../constants";
+import { FREECOMICS, FREEAUDIOCOMICS } from "../../../../constants/index";
 import { motion } from "framer-motion";
 
 const FreeComics = ({ comicType }: { comicType: "picture" | "audio" }) => {

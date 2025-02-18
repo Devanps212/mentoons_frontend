@@ -85,7 +85,7 @@ const NewsSubscription = () => {
         </div>
 
         <iframe
-          src="http://mentoonsnews.com/"
+          src="https://mentoonsnews.com/"
           title="Mentoon News"
           width="100%"
           height="500"

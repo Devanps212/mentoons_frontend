@@ -1,4 +1,4 @@
-import { COMMUNITY } from "../../../constants";
+import { COMMUNITY } from "../../../../constants";
 
 const Details = () => {
   return (

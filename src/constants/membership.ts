@@ -1,25 +1,100 @@
-export const PRIME = [
-  "Enable audio and video calling feature ( 50 connections )",
-  "Enable Chat",
-  "Access to unlimited groups",
-  "Access to freebies",
-  "Free 1 complementary call with a psychologist",
-  "4 Comics in a month",
-  "10 Audio Comics in a month",
-  "5 Podcasts in a month",
-  "Assessments",
-  "10% off on Prime to Platinum upgrade. (₹180)",
-];
+import { Membership } from "../types";
 
-export const PLATINUM = [
-  "Enable audio and video calling feature ( Unlimited connections )",
-  "Enable Chat",
-  "Access to unlimited groups",
-  "Access to freebies",
-  "Free 1 complementary call with a psychologist",
-  "10 Comics in a month",
-  "15 Audio Comics in a month",
-  "8 Podcasts in a month",
-  "Assessments",
-  "10% off on 1 year workshop",
-];
+export const PRIME: Membership = {
+  benefits: [
+    {
+      feature: "Enable Chat",
+      details: "50 Connections",
+    },
+    {
+      feature: "Access to groups",
+      details: "Unlimited",
+    },
+    { feature: "Access to freebies", details: "Included" },
+    {
+      feature: "Free complementary call with a psychologist",
+      details: "1 Call",
+    },
+    {
+      feature: "Comics per month",
+      details: "4 Comics",
+    },
+    {
+      feature: "Audio Comics per month",
+      details: "10 comics",
+    },
+    {
+      feature: "Podcasts per month",
+      details: "5 Podcasts",
+    },
+    {
+      feature: "Assessments",
+      details: "Available",
+    },
+    {
+      feature: "Workshop Discount",
+      details: "Not available",
+    },
+    {
+      feature: "Enable audio calling Feature",
+      details: "50 Connections",
+    },
+    {
+      feature: "Enable video calling Feature",
+      details: "50 Connections",
+    },
+  ],
+  price: 149,
+  character: "/characters/prime.png",
+  type: "Prime",
+};
+
+export const PLATINUM: Membership = {
+  benefits: [
+    {
+      feature:"Enable Chat", details: "Unlimited Connections"
+    },
+    {
+      feature: "Access to groups",
+      details: "Unlimited",
+    },
+    { feature: "Access to freebies", details: "Included" },
+    {
+      feature: "Free complementary call with a psychologist",
+      details: "1 Call",
+    },
+    {
+      feature: "Comics per month",
+      details: "10 Comics",
+    },
+    {
+      feature: "Audio Comics per month",
+      details: "15 comics",
+    },
+    {
+      feature: "Podcasts per month",
+      details: "8 Podcasts",
+    },
+    {
+      feature: "Assessments",
+      details: "Available",
+    },
+    {
+      feature: "Workshop Discount",
+      details: "10% off on 1-year workshop",
+    },
+    {
+      feature: "Enable audio calling Feature",
+      details: "Unlimited Connections",
+      important: true
+    },
+    {
+      feature: "Enable video calling Feature",
+      details: "Unlimited Connections",
+      important: true
+    }
+  ],
+  price: 349,
+  character: "/characters/platinum.png",
+  type: "Platinum",
+};

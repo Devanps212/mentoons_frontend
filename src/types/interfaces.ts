@@ -39,3 +39,16 @@ export interface Comics {
   title: string;
   image: string;
 }
+
+interface Features {
+  feature: string;
+  details: string;
+  important?: boolean;
+}
+
+export interface Membership {
+  benefits: Features[];
+  price: number;
+  character: string;
+  type: string;
+}

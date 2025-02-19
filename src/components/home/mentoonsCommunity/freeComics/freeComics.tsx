@@ -55,7 +55,7 @@ const FreeComics = ({ comicType }: { comicType: "picture" | "audio" }) => {
             <motion.div className="absolute inset-0 bg-gray-700 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out" />
             <motion.div className="absolute w-full p-3 bg-green-400 text-black text-center bottom-0 rounded-b-md translate-y-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
               <Link to={`/comic/${_id}`} className="block w-full h-full">
-                View Comic
+                {comicType === "picture" ? "Read Comic" : "Watch Comic"}
               </Link>
             </motion.div>
           </motion.div>

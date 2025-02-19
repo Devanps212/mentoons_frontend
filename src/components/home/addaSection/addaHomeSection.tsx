@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import AddaTV from "../addaTV/addaTV";
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { FaChevronDown, FaChevronRight } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaChevronDown, FaChevronRight, FaYoutube } from "react-icons/fa";
 import { FAQ } from "../../../constants";
+import useInView from "../../../customHooks/useInView";
 
 const AddaHomeSection = () => {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const { ref: sectionRef, isInView } = useInView(0.3, false);
 
   const [isOpen, setIsOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -22,14 +22,14 @@ const AddaHomeSection = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex justify-start items-center gap-8 bg-transparent py-23 p-20"
+      className="flex justify-start items-center gap-8 bg-transparent py-20 sm:py-10 md:py-15 xl:py-23 p-6 sm:p-8 md:p-10 lg:p-15 xl:p-20"
     >
-      <div className="flex flex-col justify-start items-start gap-2">
+      <div className="flex flex-col justify-start items-start gap-4 sm:gap-2">
         <motion.h1
           initial={{ opacity: 0, x: -80, scale: 0.8 }}
           animate={isInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", type: "spring" }}
-          className="text-[37px] sm:text-[45px] md:text-[50px] lg:text-[64px] font-bold text-[#EC9600]"
+          className="text-[20px] sm:text-[45px] md:text-[50px] lg:text-[64px] font-bold text-[#EC9600]"
         >
           Mentoons Adda
         </motion.h1>
@@ -39,10 +39,14 @@ const AddaHomeSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
         >
-          <h6 className="font-medium md:text-md lg:text-[27px]">/ˈʌdə,ˈadə/</h6>
-          <div className="flex gap-2 md:text-md lg:text-[23.4px] italic inter">
-            <span>noun</span>
-            <span>Indian</span>
+          <div className="flex justify-center items-center gap-5">
+            <h6 className="font-medium md:text-md lg:text-[27px]">
+              /ˈʌdə,ˈadə/
+            </h6>
+            <div className="md:text-md lg:text-[23.4px] italic inter">
+              <span>noun</span>
+              <span className="pl-3">Indian</span>
+            </div>
           </div>
         </motion.div>
 
@@ -50,13 +54,17 @@ const AddaHomeSection = () => {
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-          className="font-semibold md:text-[20px] lg:text-[28px] w-auto pt-5"
+          className="font-semibold text-start md:text-[17px] lg:text-[20px] xl:text-[23px] w-auto pt-5"
         >
           A place for parents and children to gather and have meaningful
           interactions and strike conversations.
         </motion.p>
 
-        <div className="w-full relative flex justify-start items-center gap-5 pt-10">
+        <div className="block md:hidden pt-10">
+          <AddaTV />
+        </div>
+
+        <div className="w-full relative flex justify-center items-center sm:justify-start sm:items-center gap-5 pt-10">
           <Link to="/adda">
             <motion.button
               initial={{ opacity: 0, rotate: -10, y: 20 }}
@@ -66,7 +74,7 @@ const AddaHomeSection = () => {
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.9 }}
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 1, rotate: 0 }}
-              className="px-5 py-4 bg-[#EC9600] font-extrabold text-[28px] text-white rounded-full shadow-lg active:shadow-none"
+              className="px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-xl sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none"
             >
               VISIT MENTOONS ADDA
             </motion.button>
@@ -81,7 +89,7 @@ const AddaHomeSection = () => {
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 1, rotate: 0 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-5 py-4 bg-[#EC9600] font-extrabold text-[28px] text-white rounded-full shadow-lg active:shadow-none"
+              className="flex items-center gap-2 px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-xl sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none"
             >
               FAQ
               <motion.div
@@ -141,9 +149,18 @@ const AddaHomeSection = () => {
         initial={{ opacity: 0, scale: 0.7 }}
         animate={isInView ? { opacity: 1, scale: 1.05 } : { opacity: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 1 }}
-        className="p-2 grid place-items-center flex-1"
+        className="p-2 grid place-items-center flex-0 xl:flex-1 hidden md:block"
       >
         <AddaTV />
+        <a
+          href="https://youtube.com/@mentoons3544?si=UEmsNRDP128trYDW"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg flex items-center gap-2 shadow-lg hover:bg-red-700 transition"
+        >
+          <FaYoutube className="w-5 h-5" />
+          Follow Us on YouTube
+        </a>
       </motion.div>
     </motion.section>
   );

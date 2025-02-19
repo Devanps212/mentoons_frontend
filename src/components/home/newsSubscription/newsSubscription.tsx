@@ -1,13 +1,13 @@
-import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import FounderNote from "../founderNote/founderNote";
 import Podcast from "./podcasts/podcast";
 import { FaTelegram } from "react-icons/fa6";
+import useInView from "../../../customHooks/useInView";
 
 const NewsSubscription = () => {
   const [active, setActive] = useState(false);
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const { ref: sectionRef, isInView } = useInView(0.3, false);
 
   return (
     <motion.div

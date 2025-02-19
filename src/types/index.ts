@@ -5,6 +5,7 @@ import {
   DropDownInterface,
   Community,
   Comics,
+  Membership,
 } from "./interfaces";
 import { Color } from "./types";
 
@@ -16,4 +17,5 @@ export type {
   Color,
   Community,
   Comics,
+  Membership,
 };

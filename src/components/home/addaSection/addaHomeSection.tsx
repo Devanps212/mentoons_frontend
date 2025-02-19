@@ -22,14 +22,14 @@ const AddaHomeSection = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex justify-start items-center gap-8 bg-transparent py-20 sm:py-10 md:py-15 xl:py-23 p-6 sm:p-8 md:p-10 lg:p-15 xl:p-20"
+      className="flex justify-start items-center gap-8 bg-transparent py-10 sm:py-10 md:py-15 xl:py-23 p-10 sm:p-8 md:p-10 lg:p-15 xl:p-20"
     >
       <div className="flex flex-col justify-start items-start gap-4 sm:gap-2">
         <motion.h1
           initial={{ opacity: 0, x: -80, scale: 0.8 }}
           animate={isInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", type: "spring" }}
-          className="text-[20px] sm:text-[45px] md:text-[50px] lg:text-[64px] font-bold text-[#EC9600]"
+          className="text-[40px] sm:text-[45px] md:text-[50px] lg:text-[64px] font-bold text-[#EC9600]"
         >
           Mentoons Adda
         </motion.h1>

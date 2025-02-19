@@ -60,7 +60,7 @@ const AddaHomeSection = () => {
           interactions and strike conversations.
         </motion.p>
 
-        <div className="block md:hidden pt-10">
+        <div className="block md:hidden pt-10 flex justify-center items-center">
           <AddaTV />
         </div>
 

@@ -10,11 +10,11 @@ const Meme = () => {
         <h1>Meme of the Day!</h1>
       </div>
       <div className="flex flex-col justify-center items-center w-full">
-        {/* <img
-          src="/meme/1600w-eV5oBZqGAG8.webp"
+        <img
+          src="/meme/WhatsApp Image 2025-02-17 at 15.56.48_ee80d5fb.jpg"
           alt="meme"
           className="w-full h-auto rounded-lg object-cover"
-        /> */}
+        />
       </div>
     </div>
   );

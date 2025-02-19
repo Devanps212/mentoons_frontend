@@ -1,6 +1,6 @@
-.clip-custom {
-  clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%);
-}
-.clip-custom {
-  border-radius: 50% 50% 0 0;
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .mentoons-video {
+    width: 65%;
+    transform: translateX(0%);
+  }
 }

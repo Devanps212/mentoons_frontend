@@ -63,28 +63,31 @@ const NewsAndContests = () => {
           ))}
         </div>
         {activeTab === "Mentoons Comics" && (
-          <div className="flex justify-start items-start">
+          <div className="flex justify-start items-start gap-2">
             <button
               onClick={() => setSelectedComicType("picture")}
-              className={`px-3 py-2 text-sm md:24 lg:w-28 font-semibold shadow-md transition-all duration-300 ${
+              className={`flex items-center justify-center px-3 py-2 w-1/4 text-xs sm:text-sm md:text-lg lg:text-xs xl:text-md font-semibold shadow-md transition-all duration-300 h-16 p-4 ${
                 selectedComicType === "picture"
                   ? "bg-blue-500 text-white"
                   : "bg-gray-300 text-gray-800"
               }`}
             >
-              Illustrated <br /> Comic
+              <span className="text-center leading-tight">
+                Illustrated <br /> Comic
+              </span>
             </button>
             <button
               onClick={() => setSelectedComicType("audio")}
-              className={`px-3 py-2 md:w-24 lg:w-28 text-sm font-semibold shadow-md transition-all duration-300 ${
+              className={`flex items-center justify-center px-3 py-2 w-1/4 text-xs sm:text-sm md:text-lg lg:text-xs font-semibold shadow-md transition-all duration-300 h-16 ${
                 selectedComicType === "audio"
                   ? "bg-green-500 text-white"
                   : "bg-gray-300 text-gray-800"
               }`}
             >
-              Illustrated <br /> Audio Comic
+              <span className="text-center leading-tight">
+                Illustrated Audio <br /> Comic
+              </span>
             </button>
-            <div></div>
           </div>
         )}
       </div>
@@ -95,7 +98,7 @@ const NewsAndContests = () => {
             <p className="akshar">Loading ...</p>
           </div>
         ) : (
-          <div className="w-full p-6 max-h-full overflow-auto">
+          <div className="w-full p-5 max-h-full overflow-auto">
             {activeTab === "Mentoons Comics" ? (
               <FreeComics comicType={selectedComicType} />
             ) : (

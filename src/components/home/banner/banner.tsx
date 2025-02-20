@@ -7,19 +7,19 @@ const Banner = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative h-screen flex flex-col justify-start sm:justify-center items-center gap-12 px-12 p-6 sm:p-6"
+      className="relative min-h-screen flex flex-col justify-start sm:justify-center items-center gap-12 px-4 sm:px-8 lg:px-12 p-6 sm:p-6"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="w-min text-center scale-105"
+        className="w-min max-w-4xl text-center scale-105"
       >
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="font-medium text-[45px] xs:text-[50px] sm:text-[58px] md:text-[70px] lg:text-[86px] p-6 xs:p-0 text-black leading-tight whitespace-nowrap text-center"
+          className="font-medium text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl p-6 xs:p-0 text-black leading-tight whitespace-nowrap text-center"
         >
           Welcome to <span className="text-[#EC9600]">Mentoons</span>
         </motion.h1>
@@ -27,7 +27,7 @@ const Banner = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="font-normal text-[#0C0A09] pt-3 md:text-[20px] lg:text-[27px] inter leading-relaxed w-full"
+          className="font-normal text-[#0C0A09] pt-3 text-lg sm:text-xl md:text-2xl inter leading-relaxed w-full"
         >
           Join us today and embark on a new world of interactive and meaningful
           parent-child interaction.
@@ -71,9 +71,9 @@ const Banner = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          className="absolute top-[102%] sm:top-[97%] md:top-[95%] lg:top-[80%] w-full flex justify-center z-30"
+          className="absolute top-[102%] sm:top-[100%] md:top-[95%] lg:top-[73%] xl:top-[80%] w-full flex justify-center z-30"
         >
-          <p className="text-white font-semibold text-[12px] sm:text-xl md:text-2xl lg:text-3xl text-center px-5 max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%] break-words whitespace-pre-wrap">
+          <p className="text-white font-semibold text-[12px] sm:text-sm md:text-md lg:text-xl xl:text-3xl text-center px-5 max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%] break-words whitespace-pre-wrap">
             Dive into a fun and engaging journey to{"\n"}expand your knowledge
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ const Banner = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-        className="absolute bottom-70 left-5 sm:left-auto sm:right-40 md:bottom-40 w-20 sm:w-24 md:w-36 lg:w-auto"
+        className="absolute bottom-1/2 left-5 sm:left-auto sm:right-40 md:bottom-40 w-20 sm:w-24 md:w-36 lg:w-auto"
       />
 
       <motion.img

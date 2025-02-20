@@ -14,7 +14,7 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="border-transparent border shadow-xl rounded-lg relative bg-white w-1/3 p-3"
+      className="border-transparent border shadow-xl rounded-lg relative bg-white w-full max-w-md p-4 sm:p-5"
     >
       {membership.type === "Platinum" && (
         <motion.div
@@ -28,7 +28,6 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
           </h1>
         </motion.div>
       )}
-
       <div className="flex flex-col gap-3">
         <div className="flex justify-between items-center w-full bg-gray-100 p-3 rounded-lg">
           <div>
@@ -42,29 +41,29 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
               Mentoons {membership.type}
             </h2>
 
-            <strong className="text-xl text-gray-800">
+            <strong className="text-lg md:text-xl text-gray-800">
               ₹{membership.price}
               <span className="text-sm text-gray-500"> / annum</span>
             </strong>
-            <p className="text-sm font-medium text-gray-500">
+            <p className="text-xs md:text-sm font-medium text-gray-500">
               (~₹{(membership.price / 12).toFixed(0)} per month)
             </p>
           </div>
           <img
             src={membership.character}
             alt={membership.type}
-            className="w-12 object-contain"
+            className="w-10 sm:w-12 object-contain"
           />
         </div>
 
-        <ul className="w-full space-y-2">
+        <ul className="w-full">
           {membership.benefits.map((data, index) => (
             <motion.li
               key={index}
               initial={{ opacity: 0, x: -10 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: index * 0.1, duration: 0.3 }}
-              className={`flex justify-between items-center gap-2 p-2 rounded-md text-sm transition-all
+              className={`flex justify-between items-center gap-2 p-2 rounded-md text-xs md:text-sm transition-all
                 ${
                   membership.type === "Platinum"
                     ? data.important
@@ -87,8 +86,7 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
             </motion.li>
           ))}
         </ul>
-
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-center mt-4">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

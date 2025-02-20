@@ -10,7 +10,7 @@ const NewsSubscription = () => {
   const { ref: sectionRef, isInView } = useInView(0.3, false);
 
   return (
-    <motion.div
+    <motion.section
       className="w-full flex flex-col lg:flex-row justify-between items-center gap-10 py-10 bg-[#F2C6DE]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -93,7 +93,7 @@ const NewsSubscription = () => {
           className="border-none rounded-xl shadow-xl pt-5"
         />
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

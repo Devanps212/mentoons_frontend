@@ -33,7 +33,7 @@ const UserStatus = () => {
   // }, []);
 
   return (
-    <div className="flex justify-start items-center gap-10 p-[2px] w-full">
+    <div className="flex justify-start items-center gap-10 p-[2px]">
       <div className="flex flex-col justify-center items-center gap-1">
         <label
           htmlFor="upload"

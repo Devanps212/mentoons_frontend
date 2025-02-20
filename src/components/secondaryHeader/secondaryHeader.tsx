@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { COMICS, GAMES, PRODUCTS, SERVICES } from "../../constants";
 import DropDown from "../dropDown/dropDown";
 import NavButton from "../nav/button";
 import { FaCreditCard, FaPhone, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { DropDownInterface } from "../../types";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SecondaryHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
   const [dropdown, setDropDown] = useState<DropDownInterface>({
     games: false,
     comics: false,
@@ -15,6 +18,22 @@ const SecondaryHeader = () => {
     services: false,
     subscription: false,
   });
+
+  const handleBrowsePlansClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => scrollToSubscription(), 500);
+    } else {
+      scrollToSubscription();
+    }
+  };
+  const scrollToSubscription = () =>
+    document
+      .getElementById("subscription")
+      ?.scrollIntoView({ behavior: "smooth" });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,6 +105,7 @@ const SecondaryHeader = () => {
         </NavButton>
         <a
           href="#subscription"
+          onClick={handleBrowsePlansClick}
           className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
         >
           <FaCreditCard className="hidden sm:block sm:text-sm md:text-lg" />

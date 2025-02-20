@@ -19,7 +19,7 @@ const NewsAndContests = () => {
   }, [activeTab, selectedComicType]);
 
   return (
-    <div className="w-1/3 h-[500px] border bg-white rounded-xl overflow-hidden shadow-lg">
+    <div className="w-full h-[500px] border border-transparent border-t-0 bg-white rounded-xl overflow-hidden shadow-xl z-999">
       <div className="flex w-full relative flex-col">
         <div className="flex w-full">
           {["Mentoons Comics", "Contests | Fun Section"].map((tab) => (
@@ -66,29 +66,29 @@ const NewsAndContests = () => {
           <div className="flex justify-start items-start">
             <button
               onClick={() => setSelectedComicType("picture")}
-              className={`px-3 py-2 font-semibold shadow-md transition-all duration-300 ${
+              className={`px-3 py-2 text-sm md:24 lg:w-28 font-semibold shadow-md transition-all duration-300 ${
                 selectedComicType === "picture"
                   ? "bg-blue-500 text-white"
                   : "bg-gray-300 text-gray-800"
               }`}
             >
-              Illustrated Comic
+              Illustrated <br /> Comic
             </button>
             <button
               onClick={() => setSelectedComicType("audio")}
-              className={`px-3 py-2 font-semibold shadow-md transition-all duration-300 ${
+              className={`px-3 py-2 md:w-24 lg:w-28 text-sm font-semibold shadow-md transition-all duration-300 ${
                 selectedComicType === "audio"
                   ? "bg-green-500 text-white"
                   : "bg-gray-300 text-gray-800"
               }`}
             >
-              Illustrated Audio Comic
+              Illustrated <br /> Audio Comic
             </button>
             <div></div>
           </div>
         )}
       </div>
-      <div className="w-full h-[445px] relative overflow-hidden">
+      <div className="w-full h-[445px] relative z-999">
         {isLoading ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
             <ClipLoader color="#36d7b7" loading={true} size={50} />

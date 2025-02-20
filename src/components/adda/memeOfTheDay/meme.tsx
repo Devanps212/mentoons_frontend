@@ -7,9 +7,9 @@ const Meme = () => {
           alt="emoji"
           className="w-5 h-5"
         />
-        <h1>Meme of the Day!</h1>
+        <h1 className="text-start w-full text-md figtree">Mentoons Meme</h1>
       </div>
-      <div className="flex flex-col justify-center items-center w-full">
+      <div className="flex flex-col justify-center items-center w-full p-3">
         <img
           src="/meme/WhatsApp Image 2025-02-17 at 15.56.48_ee80d5fb.jpg"
           alt="meme"

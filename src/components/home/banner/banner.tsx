@@ -7,7 +7,7 @@ const Banner = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="h-screen flex flex-col justify-start sm:justify-center items-center gap-12 px-12 p-6 sm:p-6 relative"
+      className="relative h-screen flex flex-col justify-start sm:justify-center items-center gap-12 px-12 p-6 sm:p-6"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -43,13 +43,41 @@ const Banner = () => {
       </motion.div>
 
       <motion.img
-        src="/banner/klement and toonla showing mentoons 1.png"
-        alt="klement_and_toonla"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-        className="max-w-[492px] max-h-[410px] translate-y-5 w-3/4 sm:w-1/2 lg:w-auto"
+        src="/fillers/SVG (1).png"
+        alt="filler"
+        className="absolute -top-5 lg:top-10 lg:left-44 lg:w-auto"
       />
+
+      <div className="relative flex justify-center w-full">
+        <motion.img
+          src="/public/icons/bg-bot.png"
+          alt="hero-bg"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="absolute top-[95%] sm:top-[93%] md:top-[90%] lg:top-[59%] w-full sm:w-[80%] md:w-[60%] lg:w-auto z-20"
+        />
+
+        <motion.img
+          src="/banner/klement and toonla showing mentoons 1.png"
+          alt="klement_and_toonla"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          className="relative z-10 max-w-[492px] max-h-[410px] w-3/4 sm:w-1/2 lg:w-auto"
+        />
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          className="absolute top-[102%] sm:top-[97%] md:top-[95%] lg:top-[80%] w-full flex justify-center z-30"
+        >
+          <p className="text-white font-semibold text-[12px] sm:text-xl md:text-2xl lg:text-3xl text-center px-5 max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%] break-words whitespace-pre-wrap">
+            Dive into a fun and engaging journey to{"\n"}expand your knowledge
+          </p>
+        </motion.div>
+      </div>
 
       <motion.img
         src="/banner/Online zoom meeting of several people.png"

@@ -4,7 +4,7 @@ export const PRIME: Membership = {
   benefits: [
     {
       feature: "Enable Chat",
-      details: "50 Connections",
+      details: "50 Members",
     },
     {
       feature: "Access to groups",
@@ -37,11 +37,11 @@ export const PRIME: Membership = {
     },
     {
       feature: "Enable audio calling Feature",
-      details: "50 Connections",
+      details: "50 Members",
     },
     {
       feature: "Enable video calling Feature",
-      details: "50 Connections",
+      details: "50 Members",
     },
   ],
   price: 149,
@@ -52,7 +52,8 @@ export const PRIME: Membership = {
 export const PLATINUM: Membership = {
   benefits: [
     {
-      feature:"Enable Chat", details: "Unlimited Connections"
+      feature: "Enable Chat",
+      details: "Unlimited Members",
     },
     {
       feature: "Access to groups",
@@ -85,14 +86,14 @@ export const PLATINUM: Membership = {
     },
     {
       feature: "Enable audio calling Feature",
-      details: "Unlimited Connections",
-      important: true
+      details: "Unlimited Members",
+      important: true,
     },
     {
       feature: "Enable video calling Feature",
-      details: "Unlimited Connections",
-      important: true
-    }
+      details: "Unlimited Members",
+      important: true,
+    },
   ],
   price: 349,
   character: "/characters/platinum.png",

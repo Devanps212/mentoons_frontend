@@ -14,7 +14,7 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="border-transparent border shadow-xl rounded-lg relative bg-white w-1/3 p-4"
+      className="border-transparent border shadow-xl rounded-lg relative bg-white w-1/3 p-3"
     >
       {membership.type === "Platinum" && (
         <motion.div
@@ -24,7 +24,7 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
           className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500 to-blue-700 px-3 py-1.5 rounded-md shadow-lg border border-blue-800 z-20"
         >
           <h1 className="text-xs font-medium flex items-center gap-2 text-white">
-            Popular Plan <FaStar className="text-yellow-400" />
+            Recommended Plan <FaStar className="text-yellow-400" />
           </h1>
         </motion.div>
       )}
@@ -32,13 +32,23 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
       <div className="flex flex-col gap-3">
         <div className="flex justify-between items-center w-full bg-gray-100 p-3 rounded-lg">
           <div>
-            <h2 className="text-lg font-semibold">{membership.type}</h2>
-            <span className="text-gray-600 text-sm">Starts at</span>
-            <br />
+            <h2
+              className={`text-lg font-semibold ${
+                membership.type === "Platinum"
+                  ? "bg-gradient-to-r from-gray-400 to-gray-500 text-transparent bg-clip-text"
+                  : "bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text"
+              }`}
+            >
+              Mentoons {membership.type}
+            </h2>
+
             <strong className="text-xl text-gray-800">
               ₹{membership.price}
               <span className="text-sm text-gray-500"> / annum</span>
             </strong>
+            <p className="text-sm font-medium text-gray-500">
+              (~₹{(membership.price / 12).toFixed(0)} per month)
+            </p>
           </div>
           <img
             src={membership.character}

@@ -50,7 +50,7 @@ const Banner = () => {
 
       <div className="relative flex justify-center w-full">
         <motion.img
-          src="/public/icons/bg-bot.png"
+          src="/icons/bg-bot.png"
           alt="hero-bg"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

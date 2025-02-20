@@ -16,9 +16,7 @@ const Adda = () => {
         <div className="flex flex-col justify-start items-start gap-10 p-5">
           <UserStatus />
           <div className="flex justify-between items-center gap-5 w-full">
-            <div className="w-1/3">
-              
-            </div>
+            <div className="w-1/3"></div>
             <div className="flex flex-col justify-center items-center gap-10 w-3/4">
               <AddPosts />
               <Posts />

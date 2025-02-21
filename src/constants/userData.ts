@@ -37,4 +37,52 @@ export const STATUSES: UserStatusInterface[] = [
     userName: "Rahul",
     userProfilePic: "/profilePictures/pexels-stefanstefancik-91227.jpg",
   },
+  {
+    status: "./status4.mp4",
+    isWatched: true,
+    userName: "Rahul",
+    userProfilePic: "/profilePictures/pexels-stefanstefancik-91227.jpg",
+  },
+  {
+    status: "./status1.mp4",
+    isWatched: false,
+    userName: "Rajesh",
+    userProfilePic: "/profilePictures/pexels-justin-shaifer-501272-1222271.jpg",
+  },
+  {
+    status: "./status1.mp4",
+    isWatched: false,
+    userName: "Rajesh",
+    userProfilePic: "/profilePictures/pexels-justin-shaifer-501272-1222271.jpg",
+  },
+  {
+    status: "./status4.mp4",
+    isWatched: true,
+    userName: "Zabeen",
+    userProfilePic: "/profilePictures/pexels-stefanstefancik-91227.jpg",
+  },
+  {
+    status: "./status4.mp4",
+    isWatched: true,
+    userName: "Rahul",
+    userProfilePic: "/profilePictures/pexels-stefanstefancik-91227.jpg",
+  },
+  {
+    status: "./status4.mp4",
+    isWatched: true,
+    userName: "Rahul",
+    userProfilePic: "/profilePictures/pexels-stefanstefancik-91227.jpg",
+  },
+  {
+    status: "./status1.mp4",
+    isWatched: false,
+    userName: "Rajesh",
+    userProfilePic: "/profilePictures/pexels-justin-shaifer-501272-1222271.jpg",
+  },
+  {
+    status: "./status1.mp4",
+    isWatched: false,
+    userName: "Rajesh",
+    userProfilePic: "/profilePictures/pexels-justin-shaifer-501272-1222271.jpg",
+  },
 ];

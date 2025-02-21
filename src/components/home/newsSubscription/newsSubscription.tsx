@@ -74,7 +74,7 @@ const NewsSubscription = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-center font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-800">
-          Subscribe to our newsletter
+          Guidance for tomorrow, balance for today
         </h1>
         <div className="w-full max-w-md rounded-full bg-white shadow-lg flex items-center h-12 p-1">
           <input

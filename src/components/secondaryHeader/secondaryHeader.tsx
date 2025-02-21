@@ -2,15 +2,18 @@ import React, { useEffect, useState } from "react";
 import { COMICS, GAMES, PRODUCTS, SERVICES } from "../../constants";
 import DropDown from "../dropDown/dropDown";
 import NavButton from "../nav/button";
-import { FaCreditCard, FaPhone, FaUser } from "react-icons/fa";
+import { FaCoins, FaCreditCard, FaPhone, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { DropDownInterface } from "../../types";
 import { useLocation, useNavigate } from "react-router-dom";
+import { FaUsers } from "react-icons/fa6";
+import { MdStorefront } from "react-icons/md";
 
 const SecondaryHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const title = location.pathname === "/adda" ? "adda" : "home";
   const [dropdown, setDropDown] = useState<DropDownInterface>({
     games: false,
     comics: false,
@@ -64,13 +67,24 @@ const SecondaryHeader = () => {
             <FaPhone /> <span> +91 90360 33300</span>
           </div>
         </a>
-        <NavButton
-          label="Comics"
-          onMouseEnter={() => handleHover("comics")}
-          onMouseLeave={() => handleMouseLeave("comics")}
-        >
-          {dropdown.comics && <DropDown items={COMICS} />}
-        </NavButton>
+        {title === "adda" ? (
+          <Link
+            to="#"
+            className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
+          >
+            <FaUsers className="hidden sm:block sm:text-sm md:text-lg" />
+            Mentoons Community
+          </Link>
+        ) : (
+          <NavButton
+            label="Comics"
+            onMouseEnter={() => handleHover("comics")}
+            onMouseLeave={() => handleMouseLeave("comics")}
+          >
+            {dropdown.comics && <DropDown items={COMICS} />}
+          </NavButton>
+        )}
+
         <NavButton
           label="Games"
           onMouseEnter={() => handleHover("games")}
@@ -78,13 +92,25 @@ const SecondaryHeader = () => {
         >
           {dropdown.games && <DropDown items={GAMES} />}
         </NavButton>
-        <NavButton
-          label="Products"
-          onMouseEnter={() => handleHover("products")}
-          onMouseLeave={() => handleMouseLeave("products")}
-        >
-          {dropdown.products && <DropDown items={PRODUCTS} />}
-        </NavButton>
+        {title === "adda" ? (
+          <Link
+            to="#"
+            className={`bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1 ${
+              title === "adda" ? "block" : "hidden"
+            }`}
+          >
+            <FaCoins className="hidden sm:block sm:text-sm md:text-lg" />
+            Collect Points
+          </Link>
+        ) : (
+          <NavButton
+            label="Products"
+            onMouseEnter={() => handleHover("products")}
+            onMouseLeave={() => handleMouseLeave("products")}
+          >
+            {dropdown.products && <DropDown items={PRODUCTS} />}
+          </NavButton>
+        )}
       </div>
       <div className="flex justify-center">
         <Link to="/">
@@ -95,7 +121,17 @@ const SecondaryHeader = () => {
           />
         </Link>
       </div>
+
       <div className="w-1/2 md:w-1/3 lg:w-1/2 flex justify-evenly items-center gap-2 md:gap-5">
+        <Link
+          to="#"
+          className={`bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1 ${
+            title === "adda" ? "block" : "hidden"
+          }`}
+        >
+          <MdStorefront className="hidden sm:block sm:text-sm md:text-lg" />
+          Products
+        </Link>
         <NavButton
           label="Services"
           onMouseEnter={() => handleHover("services")}

@@ -44,7 +44,7 @@ export const PRIME: Membership = {
       details: "50 Members",
     },
   ],
-  price: 149,
+  price: 129,
   character: "/characters/prime.png",
   type: "Prime",
 };
@@ -95,7 +95,7 @@ export const PLATINUM: Membership = {
       important: true,
     },
   ],
-  price: 349,
+  price: 279,
   character: "/characters/platinum.png",
   type: "Platinum",
 };

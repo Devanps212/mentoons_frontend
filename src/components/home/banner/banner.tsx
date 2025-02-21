@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "./banner.css";
 
 const Banner = () => {
   return (
@@ -19,7 +20,7 @@ const Banner = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="font-medium text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl p-6 xs:p-0 text-black leading-tight whitespace-nowrap text-center"
+          className="banner-title font-medium text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl p-6 xs:p-0 text-black leading-tight whitespace-nowrap text-center"
         >
           Welcome to <span className="text-[#EC9600]">Mentoons</span>
         </motion.h1>
@@ -27,7 +28,7 @@ const Banner = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="font-normal text-[#0C0A09] pt-3 text-lg sm:text-xl md:text-2xl inter leading-relaxed w-full"
+          className="banner-subtitle font-normal text-[#0C0A09] pt-3 text-lg sm:text-xl md:text-2xl inter leading-relaxed w-full"
         >
           Join us today and embark on a new world of interactive and meaningful
           parent-child interaction.
@@ -64,7 +65,7 @@ const Banner = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="relative z-10 max-w-[492px] max-h-[410px] w-3/4 sm:w-1/2 lg:w-auto"
+          className="hero-img relative z-10 max-w-[492px] max-h-[410px] w-3/4 sm:w-1/2 lg:w-auto"
         />
 
         <motion.div

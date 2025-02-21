@@ -46,7 +46,7 @@ const Banner = () => {
       <motion.img
         src="/fillers/SVG (1).png"
         alt="filler"
-        className="absolute -top-5 lg:top-10 lg:left-44 lg:w-auto"
+        className="absolute -top-5 lg:top-10 lg:left-44 lg:w-auto z-[-1]"
       />
 
       <div className="relative flex justify-center w-full">

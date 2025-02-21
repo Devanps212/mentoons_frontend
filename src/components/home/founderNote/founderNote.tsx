@@ -3,7 +3,7 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 const FounderNote = () => {
   return (
-    <section className="w-full p-5 bg-gradient-to-b from-[#FBB13E] to-[#FFE3A6]">
+    <section className="w-full p-5 lg:bg-gradient-to-b from-[#FBB13E] to-[#FFE3A6]">
       <div className="flex justify-center items-start gap-10 px-5">
         <div className="flex flex-col items-start w-full max-w-4xl gap-10 bg-white p-6 rounded-lg shadow-xl h-[400px] overflow-y-auto">
           <div className="text-center">

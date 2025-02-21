@@ -24,7 +24,7 @@ const Membership = () => {
         >
           Membership Plans
         </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 md:gap-10 w-full max-w-5xl pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-15 w-full max-w-5xl pt-8">
           <MembershipCard membership={PRIME} />
           <MembershipCard membership={PLATINUM} />
         </div>

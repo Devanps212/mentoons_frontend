@@ -4,8 +4,8 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 const FounderNote = () => {
   return (
     <section className="w-full p-5 lg:bg-gradient-to-b from-[#FBB13E] to-[#FFE3A6]">
-      <div className="flex justify-center items-start gap-10 px-5">
-        <div className="flex flex-col items-start w-full max-w-4xl gap-10 bg-white p-6 rounded-lg shadow-xl h-[400px] overflow-y-auto">
+      <div className="flex justify-center items-start gap-10">
+        <div className="flex flex-col items-start w-full max-w-xl gap-10 bg-white p-6 rounded-lg shadow-xl h-[400px] overflow-y-auto">
           <div className="text-center">
             <h1 className="text-6xl font-semibold text-[#0C0A09]">Mahesh</h1>
             <h2 className="text-2xl font-medium text-[#131315]">
@@ -17,7 +17,7 @@ const FounderNote = () => {
             <img
               src="/founder/image 28.png"
               alt="founder image"
-              className="rounded-lg shadow-lg max-w-xs"
+              className="rounded-lg shadow-lg max-w-xs w-50 h-50"
             />
           </div>
 

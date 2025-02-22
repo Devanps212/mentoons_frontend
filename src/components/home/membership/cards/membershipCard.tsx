@@ -14,7 +14,7 @@ const MembershipCard = ({ membership }: { membership: Membership }) => {
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="border-transparent border shadow-xl rounded-lg relative bg-white w-full max-w-md p-4 sm:p-5"
+      className="border-transparent border shadow-xl rounded-lg relative bg-yellow-200 w-full max-w-md p-4 sm:p-5"
     >
       {membership.type === "Platinum" && (
         <motion.div

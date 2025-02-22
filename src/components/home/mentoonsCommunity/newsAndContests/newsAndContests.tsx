@@ -5,7 +5,7 @@ import Contests from "../contests/contests";
 import FreeComics from "../freeComics/freeComics";
 
 const NewsAndContests = () => {
-  const [activeTab, setActiveTab] = useState("Mentoons Comics")
+  const [activeTab, setActiveTab] = useState("Mentoons Comics");
   const [isLoading, setIsLoading] = useState(false);
   const [selectedComicType, setSelectedComicType] = useState<
     "picture" | "audio"

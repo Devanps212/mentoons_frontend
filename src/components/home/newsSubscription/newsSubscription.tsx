@@ -68,7 +68,7 @@ const NewsSubscription = () => {
       </motion.div>
 
       <motion.div
-        className="flex flex-col justify-center items-center gap-5 w-full lg:w-[750px] px-4 sm:px-8 lg:pr-10 space-y-4"
+        className="relative flex flex-col justify-center items-center gap-5 w-full lg:w-[750px] px-4 sm:px-8 lg:pr-10 space-y-4"
         initial={{ y: 100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
         transition={{ duration: 1 }}
@@ -76,6 +76,20 @@ const NewsSubscription = () => {
         <h1 className="text-center font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-800">
           Guidance for tomorrow, balance for today
         </h1>
+        <div className="absolute top-5 sm:top-10 md:top-20 lg:top-0 left-0 w-15 sm:w-20 sm:h-20">
+          <img
+            src="/icons/folded newspaper.png"
+            alt="newspaper"
+            className="w-auto object-cover"
+          />
+        </div>
+        <div className="absolute -top-15 sm:top-13 md:top-20 lg:top-1/4 -translate-y-1/4 -translate-x-1/2 right-0 w-25 h-25">
+          <img
+            src="/icons/Messaging with paper airplanes, envelope and speech bubble.png"
+            alt="newspaper"
+            className="w-auto object-cover"
+          />
+        </div>
         <div className="w-full max-w-md rounded-full bg-white shadow-lg flex items-center h-12 p-1">
           <input
             type="text"

@@ -27,11 +27,11 @@ const Community = () => {
           >
             <Details />
             <div className="relative w-full">
-              <div className="absolute hidden lg:block -top-1/4 xl:-top-1/2 -left-1/4 xl:-left-1/3 xl:-translate-x-10 lg:w-50 lg:w-50 xl:w-96 xl:h-96 z-5 flex items-center justify-center">
+              <div className="absolute hidden lg:block -top-1/3 -left-1/3 xl:-left-1/4 xl:-translate-x-10 lg:w-50 lg:w-50 xl:w-96 xl:h-96 z-5 flex items-center justify-center">
                 <img
                   src="/fillers/spot flash.png"
                   alt="filler"
-                  className="w-full h-full object-contain"
+                  className="w-60 h-60 object-contain"
                 />
               </div>
               <div className="relative z-10 p-10 lg:p-0 md:flex md:justify-center md:items-center lg:block">

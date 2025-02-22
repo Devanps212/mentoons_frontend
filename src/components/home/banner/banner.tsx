@@ -104,7 +104,7 @@ const Banner = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-        className="absolute bottom-5 left-10 hidden md:block md:w-48 lg:w-auto"
+        className="absolute bottom-20 left-0 hidden md:block md:w-48 lg:w-auto"
       />
     </motion.section>
   );

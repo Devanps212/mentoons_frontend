@@ -7,7 +7,14 @@ const Membership = () => {
   const { ref: sectionRef, isInView } = useInView(0.3, false);
 
   return (
-    <section className="p-6 md:p-10 flex flex-col justify-center items-center bg-gradient-to-r from-[rgba(255,187,68,0.7)] to-[rgba(253,185,147,0.7)]">
+    <section
+      className="p-6 md:p-10 flex flex-col justify-center items-center bg-gradient-to-r from-[rgba(255,187,68,0.7)] to-[rgba(253,185,147,0.7)]"
+      style={{
+        backgroundImage: `url('/background/Frame_937-removebg-preview.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <motion.div
         id="subscription"
         ref={sectionRef}

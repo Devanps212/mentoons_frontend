@@ -7,21 +7,26 @@ const Membership = () => {
   const { ref: sectionRef, isInView } = useInView(0.3, false);
 
   return (
-    <section
-      className="p-6 md:p-10 flex flex-col justify-center items-center bg-gradient-to-r from-[rgba(255,187,68,0.7)] to-[rgba(253,185,147,0.7)]"
-      style={{
-        backgroundImage: `url('/background/Frame_937-removebg-preview.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative p-6 md:p-10 flex flex-col justify-center overflow-hidden items-center bg-white">
+      <div className="absolute -top-[25%] -left-[25%] translate-x-[25%] translate-y-[33%] w-[500px] h-[500px] bg-[#F1EDFC] rounded-full"></div>
+      <div className="absolute top-[39%] -left-[4%] w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)]"></div>
+      <div className="absolute top-1/2 -left-[9%] translate-y-[5%] w-[28%] h-[40%] bg-[#BC97F7] rounded-full z-0"></div>
+      <div className="absolute -bottom-[8%] -left-[5%] translate-y-[5%] w-[28%] h-[40%] bg-[#925EE1] rounded-full"></div>
+      <div className="absolute -top-[3%] right-1/6 translate-x-30 w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)] z-0"></div>
+      <div className="absolute -top-[12%] -right-[9%] w-80 h-80 bg-[#BC97F7] rounded-full z-3"></div>
+      <div className="absolute top-[4%] -right-[12%] w-96 h-96 bg-[#925EE1] rounded-full z-2"></div>
+      <div className="absolute top-1/4 -right-[4%] translate-y-5 w-64 h-64 bg-[#F0E6FE] rounded-full z-1"></div>
+      <div className="absolute top-1/2 -right-[4%] w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)] z-0"></div>
+      <div className="absolute bottom-1/6 -right-[15%] translate-y-1/2 w-[28%] h-[40%] bg-[#BC97F7] rounded-full z-1"></div>
+      <div className="absolute -bottom-[20%] -right-[5%] translate-y-[5%] w-[28%] h-[40%] bg-[#925EE1] rounded-full"></div>
+
       <motion.div
         id="subscription"
         ref={sectionRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: isInView ? 1 : 0 }}
         transition={{ duration: 1 }}
-        className="p-6 md:p-10 flex flex-col justify-center items-center w-full"
+        className="p-6 md:p-10 flex flex-col justify-center items-center w-full z-10"
       >
         <motion.h1
           initial={{ opacity: 0, y: "-100%" }}

@@ -194,6 +194,7 @@ const SecondaryHeader = () => {
         handleHover={handleHover}
         handleMouseLeave={handleMouseLeave}
         setIsOpen={setSideBarOpen}
+        handlePlans={handleBrowsePlansClick}
       />
     </header>
   );

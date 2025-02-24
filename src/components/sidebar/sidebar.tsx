@@ -13,6 +13,7 @@ const Sidebar = ({
   handleHover,
   handleMouseLeave,
   setIsOpen,
+  handlePlans,
 }: {
   isOpen: boolean;
   title: string;
@@ -25,6 +26,7 @@ const Sidebar = ({
   handleHover: (key: string) => void;
   handleMouseLeave: (key: string) => void;
   setIsOpen: (val: boolean) => void;
+  handlePlans: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 }) => {
   useEffect(() => {
     const handleBreakPoint = () => {
@@ -33,11 +35,25 @@ const Sidebar = ({
       }
     };
 
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
     window.addEventListener("resize", handleBreakPoint);
     handleBreakPoint();
 
-    return () => window.removeEventListener("resize", handleBreakPoint);
-  }, [setIsOpen]);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("resize", handleBreakPoint);
+    };
+  }, [isOpen, setIsOpen]);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    setIsOpen(false);
+    handlePlans(e);
+  };
 
   return (
     <motion.aside
@@ -109,13 +125,7 @@ const Sidebar = ({
         )}
         <Link
           to="#subscription"
-          onClick={() => {
-            setIsOpen(false);
-            const section = document.getElementById("subscription");
-            if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
+          onClick={(e) => handleClick(e)}
           className="text-white flex items-center gap-2 text-3xl sm:text-4xl md:text-5xl font-semibold"
         >
           Browse Plans

@@ -5,10 +5,14 @@ import { STATUSES } from "../../../constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { FreeMode } from "swiper/modules";
+import Status from "../../modal/status";
 // import axios, { AxiosError } from "axios";
 
 const UserStatus = () => {
   const [statuses, setStatuses] = useState<UserStatusInterface[]>(STATUSES);
+  const [selectedUser, setSelectedUser] = useState<UserStatusInterface | null>(
+    null
+  );
 
   useEffect(() => {
     setStatuses(STATUSES); //remove
@@ -67,28 +71,35 @@ const UserStatus = () => {
               1280: { slidesPerView: "auto", spaceBetween: 20 },
             }}
           >
-            {statuses.map(({ isWatched, userProfilePic, userName }, index) => (
-              <SwiperSlide
-                key={index}
-                className="!w-fit flex flex-col justify-center gap-1 flex-shrink-0"
-              >
-                <div
-                  className={`w-24 h-24 rounded-full border-3 flex justify-center items-center ${
-                    isWatched ? "border-gray-400" : "border-blue-500"
-                  }`}
+            {statuses.map((user, index) => (
+              <>
+                <SwiperSlide
+                  key={index}
+                  className="!w-fit flex flex-col gap-1 flex-shrink-0"
+                  style={{ justifyItems: "center" }}
                 >
-                  <img
-                    src={userProfilePic}
-                    alt={userName}
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-                <span className="text-center text-sm">{userName}</span>
-              </SwiperSlide>
+                  <div
+                    className={`w-24 h-24 rounded-full border-3 flex justify-center items-center ${
+                      user.isWatched ? "border-gray-400" : "border-blue-500"
+                    }`}
+                  >
+                    <img
+                      src={user.userProfilePic}
+                      alt={user.userName}
+                      className="w-full h-full object-cover rounded-full"
+                      onClick={() => setSelectedUser(user)}
+                    />
+                  </div>
+                  <span className="text-center text-sm">{user.userName}</span>
+                </SwiperSlide>
+              </>
             ))}
           </Swiper>
         </div>
       </div>
+      {selectedUser && (
+        <Status status={selectedUser} setStatus={() => setSelectedUser(null)} />
+      )}
     </div>
   );
 };

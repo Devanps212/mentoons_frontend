@@ -2,13 +2,13 @@ import { UserStatusInterface } from "../types";
 
 export const STATUSES: UserStatusInterface[] = [
   {
-    status: "./status1.mp4",
+    status: "/background/Frame_937-removebg-preview.png",
     isWatched: false,
-    userName: "Rajesh",
+    userName: "Sam Wilson",
     userProfilePic: "/profilePictures/pexels-justin-shaifer-501272-1222271.jpg",
   },
   {
-    status: "./status2.mp4",
+    status: "/video/addiction/We know THE STRUGGLES our youth is facing_03.mp4",
     isWatched: true,
     userName: "Sita",
     userProfilePic: "/profilePictures/pexels-olly-733872.jpg",

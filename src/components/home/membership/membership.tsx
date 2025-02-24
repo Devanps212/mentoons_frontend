@@ -8,17 +8,71 @@ const Membership = () => {
 
   return (
     <section className="relative p-6 md:p-10 flex flex-col justify-center overflow-hidden items-center bg-white">
-      <div className="absolute -top-[25%] -left-[25%] translate-x-[25%] translate-y-[33%] w-[500px] h-[500px] bg-[#F1EDFC] rounded-full"></div>
-      <div className="absolute top-[39%] -left-[4%] w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)]"></div>
-      <div className="absolute top-1/2 -left-[9%] translate-y-[5%] w-[28%] h-[40%] bg-[#BC97F7] rounded-full z-0"></div>
-      <div className="absolute -bottom-[8%] -left-[5%] translate-y-[5%] w-[28%] h-[40%] bg-[#925EE1] rounded-full"></div>
-      <div className="absolute -top-[3%] right-1/6 translate-x-30 w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)] z-0"></div>
-      <div className="absolute -top-[12%] -right-[9%] w-80 h-80 bg-[#BC97F7] rounded-full z-3"></div>
-      <div className="absolute top-[4%] -right-[12%] w-96 h-96 bg-[#925EE1] rounded-full z-2"></div>
-      <div className="absolute top-1/4 -right-[4%] translate-y-5 w-64 h-64 bg-[#F0E6FE] rounded-full z-1"></div>
-      <div className="absolute top-1/2 -right-[4%] w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)] z-0"></div>
-      <div className="absolute bottom-1/6 -right-[15%] translate-y-1/2 w-[28%] h-[40%] bg-[#BC97F7] rounded-full z-1"></div>
-      <div className="absolute -bottom-[20%] -right-[5%] translate-y-[5%] w-[28%] h-[40%] bg-[#925EE1] rounded-full"></div>
+      <motion.div
+        className="absolute -top-[25%] -left-[25%] translate-x-[25%] translate-y-[33%] w-[500px] h-[500px] bg-[#F1EDFC] rounded-full"
+        animate={{ y: [0, 15, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute top-[39%] -left-[4%] w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)]"
+        animate={{ y: [0, 10, 0], rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute top-1/2 -left-[9%] translate-y-[5%] w-[28%] h-[40%] bg-[#BC97F7] rounded-full z-0"
+        animate={{ y: [0, -15, 0], scale: [1, 1.05, 1] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute -bottom-[8%] -left-[5%] translate-y-[5%] w-[28%] h-[40%] bg-[#925EE1] rounded-full"
+        animate={{ y: [0, 12, 0], rotate: [-5, 5, -5] }}
+        transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute -top-[3%] right-1/6 translate-x-30 w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)] z-0"
+        animate={{ y: [0, 8, 0], scale: [1, 1.07, 1] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute -top-[12%] -right-[9%] w-80 h-80 bg-[#BC97F7] rounded-full z-3"
+        animate={{ y: [0, 20, 0], scale: [1, 1.05, 1] }}
+        transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute top-[4%] -right-[12%] w-96 h-96 bg-[#925EE1] rounded-full z-2"
+        animate={{ y: [0, 15, 0], rotate: [-3, 3, -3] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute top-1/4 -right-[4%] translate-y-5 w-64 h-64 bg-[#F0E6FE] rounded-full z-1"
+        animate={{ y: [0, -10, 0], scale: [1, 1.08, 1] }}
+        transition={{ duration: 6.8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute top-1/2 -right-[4%] w-32 h-32 bg-[#F5F1FF] rounded-full shadow-[inset_-1px_-5px_7px_rgba(0,0,0,0.2)] z-0"
+        animate={{ y: [0, 12, 0], scale: [1, 1.04, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute bottom-1/6 -right-[15%] translate-y-1/2 w-[28%] h-[40%] bg-[#BC97F7] rounded-full z-1"
+        animate={{ y: [0, -8, 0], scale: [1, 1.05, 1] }}
+        transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="absolute -bottom-[20%] -right-[5%] translate-y-[5%] w-[28%] h-[40%] bg-[#925EE1] rounded-full"
+        animate={{ y: [0, 14, 0], rotate: [-4, 4, -4] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <motion.div
         id="subscription"

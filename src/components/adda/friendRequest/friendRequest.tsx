@@ -13,7 +13,14 @@ const FriendRequest = () => {
 
   return (
     <div className="flex flex-col items-center p-5 mt-10 w-full">
-      <h1 className="text-start w-full text-md figtree">Friend Requests</h1>
+      <h1 className="flex justify-start items-start gap-5 text-start w-full text-md figtree">
+        <img
+          src="/characters/dd917c3b5f69868482390319c6a80c25.png"
+          alt="klem-friend"
+          className="w-5"
+        />
+        Friend Requests
+      </h1>
       <div className="w-full max-w-sm md:max-w-md lg:max-w-lg max-h-96 overflow-y-auto">
         {requests?.map(({ profilePic, userName }, index) => (
           <div

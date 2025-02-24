@@ -4,6 +4,7 @@ import Meme from "../components/adda/memeOfTheDay/meme";
 import UserStatus from "../components/adda/userStatus/userStatus";
 import AddPosts from "../components/adda/addPosts/addPosts";
 import Posts from "../components/adda/addPosts/posts/posts";
+import Influencer from "../components/adda/influencer/influencer";
 
 const Adda = () => {
   useEffect(() => {
@@ -52,6 +53,7 @@ const Adda = () => {
             <div className="shadow-lg p-4 rounded-lg bg-white">
               <FriendRequest />
             </div>
+            <Influencer />
             <Meme />
             {/* <Birthday /> Uncomment if needed */}
           </div>

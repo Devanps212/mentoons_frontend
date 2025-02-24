@@ -95,8 +95,16 @@ const AddaHomeSection = () => {
               <motion.div
                 animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="sm:block hidden"
               >
-                <FaChevronRight className="text-white text-[20px]" />
+                <FaChevronRight className="text-white text-[18px] md:text-[20px] " />
+              </motion.div>
+              <motion.div
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="sm:hidden block"
+              >
+                <FaChevronDown className="text-white text-[15px] sm:hidden block" />
               </motion.div>
             </motion.button>
             {isOpen && (
@@ -105,16 +113,16 @@ const AddaHomeSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="absolute top-0 left-30 mt-3 w-64 bg-white shadow-lg rounded-lg p-4 text-black z-10"
+                className="absolute top-full -left-[75%] md:left-[30px] mt-3 w-48 sm:w-64 bg-white shadow-lg rounded-lg p-2 sm:p-4 text-black z-10"
               >
                 <ul className="h-full w-full flex flex-col gap-2">
                   {FAQ.map((faq, index) => (
                     <li
                       key={index}
-                      className="border p-4 rounded cursor-pointer"
+                      className="border p-2 sm:p-4 rounded cursor-pointer"
                     >
                       <div
-                        className="flex justify-between items-center hover:text-[#EC9600]"
+                        className="flex justify-between items-center hover:text-[#EC9600] text-sm sm:text-base"
                         onClick={() => toggleFAQ(index)}
                       >
                         {faq.question}
@@ -134,7 +142,9 @@ const AddaHomeSection = () => {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="mt-2 text-gray-700">{faq.answer}</p>
+                        <p className="mt-2 text-gray-700 text-sm sm:text-base">
+                          {faq.answer}
+                        </p>
                       </motion.div>
                     </li>
                   ))}

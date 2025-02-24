@@ -74,7 +74,7 @@ const AddaHomeSection = () => {
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.9 }}
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 1, rotate: 0 }}
-              className="px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-xl sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none"
+              className="px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-[7px] sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none"
             >
               VISIT MENTOONS ADDA
             </motion.button>
@@ -89,7 +89,7 @@ const AddaHomeSection = () => {
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 1, rotate: 0 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-xl sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none"
+              className="flex items-center gap-2 px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-[7px] sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none"
             >
               FAQ
               <motion.div
@@ -97,7 +97,7 @@ const AddaHomeSection = () => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="sm:block hidden"
               >
-                <FaChevronRight className="text-white text-[18px] md:text-[20px] " />
+                <FaChevronRight className="text-white text-[7px] sm:text-[18px] md:text-[20px] " />
               </motion.div>
               <motion.div
                 animate={{ rotate: isOpen ? 180 : 0 }}

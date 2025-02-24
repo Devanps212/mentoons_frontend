@@ -92,3 +92,15 @@
     padding: 0 10px;
   }
 }
+
+@media (max-width: 408px) {
+  .hero-banner-text {
+    font-size: 7px;
+    padding: 0.5px;
+  }
+
+  .hero-banner-bg {
+    top: 105%;
+    left: 0;
+  }
+}

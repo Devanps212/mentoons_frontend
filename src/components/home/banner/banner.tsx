@@ -8,7 +8,7 @@ const Banner = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative min-h-screen flex flex-col justify-start lg:justify-center items-center gap-12 px-4 sm:px-8 lg:px-12 p-6 sm:p-6"
+      className="relative h-fit sm:min-h-screen flex flex-col justify-start lg:justify-center items-center gap-12 px-4 sm:px-8 lg:px-12 p-6 sm:p-6"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -72,10 +72,12 @@ const Banner = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          className="absolute top-[102%] sm:top-[100%] md:top-[95%] lg:top-[73%] xl:top-[80%] w-full flex justify-center z-30"
+          className="hero-banner-bg absolute top-[calc(100%+20px)] sm:top-[100%] md:top-[96%] lg:top-[73%] xl:top-[80%] w-full flex justify-center z-30 h-32 sm:h-36 md:h-40 lg:h-48"
         >
-          <p className="hero-banner-text text-white font-semibold text-[12px] sm:text-sm md:text-md lg:text-xl xl:text-3xl text-center px-5 max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%] break-words whitespace-pre-wrap">
-            Dive into a fun and engaging journey to{"\n"}expand your knowledge
+          <p className="hero-banner-text text-white font-semibold text-[13px] sm:text-sm md:text-[15px] lg:text-xl xl:text-3xl text-center px-3 sm:px-5 leading-tight sm:leading-normal">
+            Dive into a fun and engaging journey to
+            <br className="hidden sm:block" />
+            expand your knowledge
           </p>
         </motion.div>
       </div>

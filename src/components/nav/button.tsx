@@ -25,11 +25,13 @@ const NavButton = ({
   label,
   onMouseEnter,
   onMouseLeave,
+  className = "text-center text-[12px] sm:text-sm md:text-base font-semibold text-white",
 }: {
   children: React.ReactNode;
   label: string;
   onMouseEnter: (menu: string) => void;
   onMouseLeave: (menu: string) => void;
+  className?: string;
 }) => {
   const menuKey = label.toLowerCase();
   return (
@@ -38,7 +40,9 @@ const NavButton = ({
       onMouseEnter={() => onMouseEnter(menuKey)}
       onMouseLeave={() => onMouseLeave(menuKey)}
     >
-      <button className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1">
+      <button
+        className={`bg-transparent outline-none cursor-pointer ${className} flex items-center gap-1`}
+      >
         <span className="hidden sm:block">{ICONS[menuKey]}</span>
         {label}
       </button>

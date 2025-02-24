@@ -74,7 +74,7 @@ const AddaHomeSection = () => {
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.9 }}
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 1, rotate: 0 }}
-              className="px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-xl sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none"
+              className="px-5 py-2 sm:py-2 lg:py-4 bg-[#EC9600] font-extrabold text-xl sm:text-[12px] md:text-[15px] lg:text-[20px] xl:text-[28px] text-white rounded-full sm:rounded-xl lg:rounded-full shadow-lg active:shadow-none whitespace-nowrap"
             >
               VISIT MENTOONS ADDA
             </motion.button>

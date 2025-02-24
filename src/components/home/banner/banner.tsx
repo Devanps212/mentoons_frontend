@@ -8,7 +8,7 @@ const Banner = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative min-h-screen flex flex-col justify-start sm:justify-center items-center gap-12 px-4 sm:px-8 lg:px-12 p-6 sm:p-6"
+      className="relative min-h-screen flex flex-col justify-start lg:justify-center items-center gap-12 px-4 sm:px-8 lg:px-12 p-6 sm:p-6"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -37,7 +37,7 @@ const Banner = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-          className="mt-4 text-[#0C0A09] font-semibold md:text-[20px] lg:text-[27px] inter leading-relaxed"
+          className="mt-4 text-[#0C0A09] font-semibold text-[15px] md:text-[20px] lg:text-[27px] inter leading-relaxed"
         >
           Start connecting, learning, and growing together.
         </motion.h6>
@@ -74,7 +74,7 @@ const Banner = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           className="absolute top-[102%] sm:top-[100%] md:top-[95%] lg:top-[73%] xl:top-[80%] w-full flex justify-center z-30"
         >
-          <p className="text-white font-semibold text-[12px] sm:text-sm md:text-md lg:text-xl xl:text-3xl text-center px-5 max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%] break-words whitespace-pre-wrap">
+          <p className="hero-banner-text text-white font-semibold text-[12px] sm:text-sm md:text-md lg:text-xl xl:text-3xl text-center px-5 max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%] break-words whitespace-pre-wrap">
             Dive into a fun and engaging journey to{"\n"}expand your knowledge
           </p>
         </motion.div>

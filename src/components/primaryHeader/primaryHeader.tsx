@@ -44,7 +44,7 @@ const PrimaryHeader = () => {
             .concat(animationTexts)
             .map(({ text, color }, index) => (
               <h1
-                className={`${color} text-[15px] md:text-xs lg:text-sm xl:text-base`}
+                className={`${color} font-normal md:font-medium lg:font-light text-[15px] md:text-md lg:text-lg xl:text-base`}
                 key={index}
               >
                 {text}

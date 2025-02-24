@@ -74,7 +74,7 @@ const Banner = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           className="hero-banner-bg absolute top-[calc(100%+20px)] sm:top-[100%] md:top-[96%] lg:top-[73%] xl:top-[80%] w-full flex justify-center z-30 h-32 sm:h-36 md:h-40 lg:h-48"
         >
-          <p className="hero-banner-text text-white font-semibold text-[13px] sm:text-sm md:text-[15px] lg:text-xl xl:text-3xl text-center px-3 sm:px-5 leading-tight sm:leading-normal">
+          <p className="hero-banner-text text-white font-semibold text-[15px] sm:text-sm md:text-[15px] lg:text-xl xl:text-3xl text-center px-3 sm:px-5 leading-tight sm:leading-normal">
             Dive into a fun and engaging journey to
             <br className="hidden sm:block" />
             expand your knowledge
@@ -88,7 +88,10 @@ const Banner = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-        className="absolute top-50 sm:top-10 right-5 sm:right-15 md:top-35 w-15 sm:w-25 md:w-32 lg:w-auto"
+        className="absolute right-2 sm:right-10 md:right-16 lg:right-20 xl:right-24 
+             top-[45%] sm:top-1/4 md:top-1/3 lg:top-1/3 xl:top-30 
+             w-[60px] md:w-[80px] lg:w-[100px] xl:w-[120px] 
+             max-w-full h-auto"
       />
 
       <motion.img
@@ -97,7 +100,7 @@ const Banner = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-        className="absolute bottom-1/2 left-5 sm:left-auto sm:right-40 md:bottom-40 w-20 sm:w-24 md:w-36 lg:w-auto"
+        className="absolute bottom-1/2 left-5 sm:left-auto right-10 xl:right-40 md:right-0 md:bottom-1/5 lg:bottom-40 w-20 sm:w-24 md:w-36 lg:w-auto"
       />
 
       <motion.img
@@ -106,7 +109,7 @@ const Banner = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-        className="absolute bottom-20 left-0 hidden md:block md:w-48 lg:w-auto"
+        className="absolute bottom-20 left-0 hidden sm:block sm:w-48 lg:w-auto"
       />
     </motion.section>
   );

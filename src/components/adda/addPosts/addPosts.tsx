@@ -28,7 +28,7 @@ const AddPosts = () => {
           />
         </div>
         <hr className="border border-1 w-full border-gray-300" />
-        <div className="flex justify-between items-center gap-10 p-5 w-full">
+        <div className="flex justify-between items-center gap-10 p-5 w-auto">
           {PHOTO_POST.map(({ icon, purpose }, index) => (
             <button
               className="outline-none flex items-center gap-3 cursor-pointer"

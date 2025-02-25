@@ -1,14 +1,32 @@
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
-const FounderNote = () => {
+const FounderNote = ({ scroll = false }: { scroll?: boolean }) => {
   return (
-    <section className="w-full p-5 lg:bg-gradient-to-b from-[#FBB13E] to-[#FFE3A6]">
+    <section
+      className={`w-full p-2 rounded-xl ${
+        scroll ? "" : "lg:bg-gradient-to-b from-[#FBB13E] to-[#FFE3A6]"
+      }`}
+    >
       <div className="flex justify-center items-start gap-10">
-        <div className="flex flex-col items-start w-full max-w-xl gap-10 bg-white p-6 rounded-lg shadow-xl h-[400px] overflow-y-auto">
-          <div className="text-center">
-            <h1 className="text-6xl font-semibold text-[#0C0A09]">Mahesh</h1>
-            <h2 className="text-2xl font-medium text-[#131315]">
+        <div
+          className={`flex flex-col items-center w-full max-w-xl gap-10 bg-white p-6 rounded-lg ${
+            scroll ? "h-fit" : "shadow-xl h-[400px] overflow-y-auto"
+          }`}
+        >
+          <div className="text-center flex flex-col justify-center items-center">
+            <h1
+              className={`text-6xl font-semibold ${
+                scroll ? "text-[#FF4500]" : "text-[#0C0A09]"
+              }`}
+            >
+              Mahesh
+            </h1>
+            <h2
+              className={`text-2xl font-medium ${
+                scroll ? "text-[#008080]" : "text-[#131315]"
+              }`}
+            >
               Founder & CEO
             </h2>
           </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FRIEND_REQUEST } from "../../../constants";
 import { RequestInterface } from "../../../types";
+import "./friendRequest.css";
 
 const FriendRequest = () => {
   const [requests, setRequests] = useState<RequestInterface[] | null>(
@@ -12,8 +13,8 @@ const FriendRequest = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center p-5 mt-10 w-full">
-      <h1 className="flex justify-start items-start gap-5 text-start w-full text-md figtree">
+    <div className="flex flex-col items-center p-0 md:p-5 w-full">
+      <h1 className="flex justify-start items-start gap-5 text-start w-full text-sm md:text-md figtree">
         <img
           src="/characters/dd917c3b5f69868482390319c6a80c25.png"
           alt="klem-friend"
@@ -21,7 +22,7 @@ const FriendRequest = () => {
         />
         Friend Requests
       </h1>
-      <div className="w-full max-w-sm md:max-w-md lg:max-w-lg max-h-96 overflow-y-auto">
+      <div className="w-full max-w-sm md:max-w-md lg:max-w-lg max-h-80 overflow-y-auto scrollbar-hide">
         {requests?.map(({ profilePic, userName }, index) => (
           <div
             key={index}
@@ -38,10 +39,10 @@ const FriendRequest = () => {
               <h3 className="text-lg font-medium">{userName}</h3>
             </div>
             <div className="flex justify-between w-full gap-3">
-              <button className="flex-1 py-2 rounded-lg bg-gradient-to-r from-[#05f] via-[#09f] to-[#1E74FD] text-white font-medium hover:opacity-80 transition">
+              <button className="flex-1 py-2 rounded-lg bg-gradient-to-r from-[#05f] via-[#09f] to-[#1E74FD] text-white font-medium hover:opacity-80 text-sm md:text-base transition">
                 Confirm
               </button>
-              <button className="flex-1 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 transition">
+              <button className="flex-1 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium text-sm md:text-base hover:bg-gray-300 transition">
                 Cancel
               </button>
             </div>

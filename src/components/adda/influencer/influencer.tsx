@@ -1,8 +1,10 @@
 const Influencer = () => {
   return (
     <div className="flex flex-col justify-center items-center p-5 rounded-xl shadow-xl">
-      <h1 className="text-start figtree w-full">Become Mentoons Influencer</h1>
-      <div className="w-full h-auto rounded-lg pt-4">
+      <h1 className="text-start figtree w-full text-sm md:text-base">
+        Become Mentoons Influencer
+      </h1>
+      <div className="w-full h-auto rounded-lg pt-4 overflow-hidden">
         <img
           src="/icons/Become influencer.png"
           alt="influencer"

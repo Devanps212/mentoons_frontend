@@ -5,9 +5,11 @@ const Meme = () => {
         <img
           src="/emojis/e62353b3daac244b2443ebe94d0d8343.png"
           alt="emoji"
-          className="w-5 h-5"
+          className="w-5 md:h-5"
         />
-        <h1 className="text-start w-full text-md figtree">Mentoons Meme</h1>
+        <h1 className="text-start w-full text-sm md:text-md figtree">
+          Mentoons Meme
+        </h1>
       </div>
       <div className="flex flex-col justify-center items-center w-full p-3">
         <img

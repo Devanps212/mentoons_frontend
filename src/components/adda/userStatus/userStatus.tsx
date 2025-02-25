@@ -40,7 +40,7 @@ const UserStatus = () => {
   // }, []);
 
   return (
-    <div className="relative max-w-[95%]">
+    <section className="relative max-w-[95%]">
       <div className="flex w-full items-center gap-5 overflow-x-auto scrollbar-hide">
         <div className="flex flex-col justify-center items-center gap-1 flex-shrink-0">
           <label
@@ -100,7 +100,7 @@ const UserStatus = () => {
       {selectedUser && (
         <Status status={selectedUser} setStatus={() => setSelectedUser(null)} />
       )}
-    </div>
+    </section>
   );
 };
 

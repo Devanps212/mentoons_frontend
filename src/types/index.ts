@@ -7,6 +7,7 @@ import {
   Comics,
   Membership,
 } from "./interfaces";
+import { Auth } from "./auth/interface";
 import { Color } from "./types";
 
 export type {
@@ -18,4 +19,5 @@ export type {
   Community,
   Comics,
   Membership,
+  Auth,
 };

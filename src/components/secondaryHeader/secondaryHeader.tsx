@@ -73,13 +73,19 @@ const SecondaryHeader = () => {
     >
       <a
         href="tel:+919036033300"
-        className="no-underline md:hidden block whitespace-nowrap"
+        className={`no-underline ${
+          title === "adda" ? "lg:hidden block" : "md:hidden block"
+        } whitespace-nowrap`}
       >
         <div className="bg-white text-[10px] md:text-[12px] font-semibold rounded-full px-2 md:px-3 py-1 flex justify-center items-center gap-2 text-[#EC9600]">
           <FaPhone /> <span> +91 90360 33300</span>
         </div>
       </a>
-      <div className="w-auto lg:w-1/2 hidden md:flex justify-center items-center gap-3 md:gap-10">
+      <div
+        className={`w-auto lg:w-1/2 ${
+          title === "adda" ? "hidden lg:flex" : "hidden md:flex"
+        } justify-center items-center gap-3 md:gap-10`}
+      >
         <a href="tel:+919036033300" className="no-underline hidden xl:block">
           <div className="bg-white text-[10px] md:text-[12px] font-semibold rounded-full px-2 md:px-3 py-1 flex justify-center items-center gap-2 text-[#EC9600]">
             <FaPhone /> <span> +91 90360 33300</span>
@@ -140,7 +146,9 @@ const SecondaryHeader = () => {
         </Link>
       </div>
       <motion.div
-        className="md:hidden block cursor-pointer z-50"
+        className={`${
+          title === "adda" ? "lg:hidden block" : "md:hidden block"
+        } cursor-pointer z-50`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ rotate: 90, scale: 0.9 }}
         transition={{ type: "spring", stiffness: 300 }}
@@ -159,7 +167,11 @@ const SecondaryHeader = () => {
         )}
       </motion.div>
 
-      <div className="w-fit lg:w-1/2 hidden md:flex justify-evenly items-center gap-2 md:gap-5">
+      <div
+        className={`w-fit lg:w-1/2 ${
+          title === "adda" ? "hidden lg:flex" : "hidden md:flex"
+        } justify-evenly items-center gap-2 md:gap-5`}
+      >
         <Link
           to="#"
           className={`bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1 ${

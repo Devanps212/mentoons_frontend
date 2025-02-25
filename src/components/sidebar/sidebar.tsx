@@ -30,7 +30,7 @@ const Sidebar = ({
 }) => {
   useEffect(() => {
     const handleBreakPoint = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
@@ -63,7 +63,7 @@ const Sidebar = ({
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className={`fixed inset-0 w-full h-full bg-gray-900 bg-opacity-90 flex flex-col items-center justify-center gap-8 transition-opacity ${
         isOpen ? "pointer-events-auto" : "pointer-events-none"
-      } md:hidden`}
+      } lg:hidden`}
     >
       <div className="flex flex-col items-center gap-12">
         {title === "adda" ? (

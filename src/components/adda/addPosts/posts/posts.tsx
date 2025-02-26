@@ -96,10 +96,10 @@ const Posts = () => {
                   boxShadow: "0px 4px 10px rgba(0,0,0,0.2)",
                 }}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
-                className="rounded-full w-10 h-10 sm:w-12 sm:h-12 p-2 border border-gray-400 flex justify-center items-center"
+                className="rounded-full w-8 sm:w-12 sm:h-12 p-2 border border-gray-400 flex justify-center items-center"
                 onClick={() => setShowComments(!showComments)}
               >
-                <BiComment className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500" />
+                <BiComment className="w-4 sm:w-6 sm:h-6 text-yellow-500" />
               </motion.button>
               <span className="text-[#605F5F] text-sm sm:text-base figtree">
                 {comments.length}
@@ -108,8 +108,8 @@ const Posts = () => {
             <Share postDetails={postDetails} />
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <button className="rounded-full w-10 h-10 sm:w-12 sm:h-12 p-2 flex justify-center items-center">
-              <FaRegBookmark className="w-5 h-5 sm:w-6 sm:h-6 text-[#D56A11]" />
+            <button className="rounded-full sm:w-8 sm:w-10 sm:h-10 p-2 flex justify-center items-center">
+              <FaRegBookmark className="w-5 sm:w-6 sm:h-6 text-[#D56A11]" />
             </button>
             <span className="text-[#605F5F] text-sm sm:text-base figtree">
               5

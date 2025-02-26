@@ -58,13 +58,13 @@ const Likes = () => {
             transition={{ duration: 0.2 }}
           >
             <motion.button
-              className="p-1 hover:scale-125 transition flex justify-center items-center w-5 sm:w-10 sm:h-10"
+              className="p-1 hover:scale-125 transition flex justify-center items-center w-8 sm:w-10 sm:h-10"
               onClick={() => handleReaction("like")}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
               <FaThumbsUp
-                className={`w-4 sm:w-6 sm:h-6 ${
+                className={`w-5 sm:w-6 sm:h-6 ${
                   selectedReaction === "like"
                     ? "text-blue-500"
                     : "text-gray-500"
@@ -72,13 +72,13 @@ const Likes = () => {
               />
             </motion.button>
             <motion.button
-              className="p-1 hover:scale-125 transition flex justify-center items-center w-5 sm:w-10 sm:h-10"
+              className="p-1 hover:scale-125 transition flex justify-center items-center w-8 sm:w-10 sm:h-10"
               onClick={() => handleReaction("love")}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
               <FaHeart
-                className={`w-4 sm:w-6 sm:h-6 ${
+                className={`w-5 sm:w-6 sm:h-6 ${
                   selectedReaction === "love" ? "text-red-600" : "text-gray-500"
                 }`}
               />

@@ -39,13 +39,13 @@ const Share = ({ postDetails }: { postDetails: PostDetails }) => {
   return (
     <div className="relative flex items-center gap-3 share-container">
       <motion.button
-        className="rounded-full w-12 h-12 p-2 border border-gray-400 flex justify-center items-center"
+        className="rounded-full w-8 sm:w-12 sm:h-12 p-2 border border-gray-400 flex justify-center items-center"
         onClick={() => setShareOptions(!showShareOptions)}
         whileTap={{ scale: 0.9 }}
         whileHover={{ scale: 1.1, boxShadow: "0px 4px 10px rgba(0,0,0,0.2)" }}
         transition={{ duration: 0.2, ease: "easeInOut" }}
       >
-        <BiShare className="w-6 h-6 text-[#EC9600] transform scale-x-[-1]" />
+        <BiShare className="w-5 sm:w-6 sm:h-6 text-[#EC9600] transform scale-x-[-1]" />
       </motion.button>
 
       <span className="text-[#605F5F] text-base figtree text-sm">
@@ -63,7 +63,7 @@ const Share = ({ postDetails }: { postDetails: PostDetails }) => {
             type: "spring",
             stiffness: 120,
           }}
-          className="absolute bottom-16 left-0 bg-white shadow-xl p-3 rounded-lg border border-gray-300 flex justify-center items-center gap-3 z-10"
+          className="absolute bottom-13 sm:bottom-16 -left-3/5 sm:left-0 bg-white shadow-xl sm:p-2 md:p-3 rounded-lg border border-gray-300 flex justify-center items-center gap-3 z-10"
         >
           <a
             href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
@@ -73,7 +73,7 @@ const Share = ({ postDetails }: { postDetails: PostDetails }) => {
             rel="noopener noreferrer"
             className="flex justify-center items-center text-green-600 p-2"
           >
-            <FaWhatsapp className="w-5 h-5" />
+            <FaWhatsapp className="w-4 sm:w-5 sm:h-5" />
           </a>
           <a
             href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
@@ -83,7 +83,7 @@ const Share = ({ postDetails }: { postDetails: PostDetails }) => {
             rel="noopener noreferrer"
             className="flex justify-center items-center text-blue-500 p-2"
           >
-            <FaTwitter className="w-5 h-5" />
+            <FaTwitter className="w-4 sm:w-5 sm:h-5" />
           </a>
           <a
             href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
@@ -93,7 +93,7 @@ const Share = ({ postDetails }: { postDetails: PostDetails }) => {
             rel="noopener noreferrer"
             className="flex justify-center items-center text-blue-700 p-2"
           >
-            <FaLinkedin className="w-5 h-5" />
+            <FaLinkedin className="w-4 sm:w-5 sm:h-5" />
           </a>
           <a
             href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
@@ -103,7 +103,7 @@ const Share = ({ postDetails }: { postDetails: PostDetails }) => {
             rel="noopener noreferrer"
             className="flex justify-center items-center text-blue-600 p-2"
           >
-            <FaFacebook className="w-5 h-5" />
+            <FaFacebook className="w-4 sm:w-5 sm:h-5" />
           </a>
         </motion.div>
       )}

@@ -32,20 +32,20 @@ const Likes = () => {
     <div className="flex justify-center items-center gap-3">
       <div className="relative">
         <motion.button
-          className="p-2 bg-white border border-gray-400 rounded-full flex justify-center items-center w-12 h-12"
+          className="p-2 bg-white border border-gray-400 rounded-full flex justify-center items-center w-8 sm:w-12 sm:h-12"
           onClick={() => setShowOptions(!showOptions)}
           whileTap={{ scale: 0.9 }}
         >
           {selectedReaction === "like" ? (
             <motion.div animate={{ scale: 1.2 }} transition={{ duration: 0.2 }}>
-              <FaThumbsUp className="w-6 h-6 text-blue-500" />
+              <FaThumbsUp className="w-4 sm:w-6 sm:h-6 text-blue-500" />
             </motion.div>
           ) : selectedReaction === "love" ? (
             <motion.div animate={{ scale: 1.2 }} transition={{ duration: 0.2 }}>
-              <FaHeart className="w-6 h-6 text-red-500" />
+              <FaHeart className="w-4 sm:w-6 sm:h-6 text-red-500" />
             </motion.div>
           ) : (
-            <FaRegThumbsUp className="w-6 h-6 text-gray-600" />
+            <FaRegThumbsUp className="w-4 sm:w-6 sm:h-6 text-gray-600" />
           )}
         </motion.button>
 
@@ -58,13 +58,13 @@ const Likes = () => {
             transition={{ duration: 0.2 }}
           >
             <motion.button
-              className="p-1 hover:scale-125 transition flex justify-center items-center w-10 h-10"
+              className="p-1 hover:scale-125 transition flex justify-center items-center w-5 sm:w-10 sm:h-10"
               onClick={() => handleReaction("like")}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
               <FaThumbsUp
-                className={`w-6 h-6 ${
+                className={`w-4 sm:w-6 sm:h-6 ${
                   selectedReaction === "like"
                     ? "text-blue-500"
                     : "text-gray-500"
@@ -72,13 +72,13 @@ const Likes = () => {
               />
             </motion.button>
             <motion.button
-              className="p-1 hover:scale-125 transition flex justify-center items-center w-10 h-10"
+              className="p-1 hover:scale-125 transition flex justify-center items-center w-5 sm:w-10 sm:h-10"
               onClick={() => handleReaction("love")}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
               <FaHeart
-                className={`w-6 h-6 ${
+                className={`w-4 sm:w-6 sm:h-6 ${
                   selectedReaction === "love" ? "text-red-600" : "text-gray-500"
                 }`}
               />
@@ -89,7 +89,7 @@ const Likes = () => {
       <div className="flex items-center gap-3">
         {reactionCounts.like > 0 && (
           <div className="flex items-center gap-1 text-blue-500">
-            <FaThumbsUp className="w-5 h-5" />
+            <FaThumbsUp className="w-3 sm:w-5 sm:h-5" />
             <span className="text-[#605F5F] figtree text-sm">
               {reactionCounts.like}
             </span>
@@ -97,7 +97,7 @@ const Likes = () => {
         )}
         {reactionCounts.love > 0 && (
           <div className="flex items-center gap-1 text-red-500">
-            <FaHeart className="w-5 h-5" />
+            <FaHeart className="w-3 sm:w-5 sm:h-5" />
             <span className="text-[#605F5F] figtree text-sm">
               {reactionCounts.love}
             </span>

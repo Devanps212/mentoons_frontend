@@ -42,7 +42,6 @@ const Posts = () => {
   return (
     <>
       <div className="flex flex-col justify-start items-center gap-5 p-5 shadow-xl rounded-xl w-full min-h-fit">
-        {/* User Info */}
         <div className="flex justify-start items-center gap-3 w-full">
           <div className="w-14 h-14 rounded-full overflow-hidden">
             <img
@@ -62,7 +61,6 @@ const Posts = () => {
           </div>
         </div>
 
-        {/* Post Description */}
         <p className="figtree text-[#3E3E59] text-base w-full break-words">
           {isExpanded
             ? postDetails.description
@@ -78,7 +76,6 @@ const Posts = () => {
           )}
         </p>
 
-        {/* Post Image */}
         <div className="w-full">
           <img
             src={postDetails.imageUrl}
@@ -88,13 +85,9 @@ const Posts = () => {
           />
         </div>
 
-        {/* Post Actions */}
         <div className="flex justify-between items-center px-3 w-full">
           <div className="flex justify-start items-center gap-3 sm:gap-4">
-            {/* Likes */}
             <Likes />
-
-            {/* Comments */}
             <div className="flex items-center gap-2 sm:gap-3">
               <motion.button
                 whileTap={{ scale: 0.9 }}
@@ -112,12 +105,8 @@ const Posts = () => {
                 {comments.length}
               </span>
             </div>
-
-            {/* Share */}
             <Share postDetails={postDetails} />
           </div>
-
-          {/* Save Post */}
           <div className="flex items-center gap-2 sm:gap-3">
             <button className="rounded-full w-10 h-10 sm:w-12 sm:h-12 p-2 flex justify-center items-center">
               <FaRegBookmark className="w-5 h-5 sm:w-6 sm:h-6 text-[#D56A11]" />
@@ -127,8 +116,6 @@ const Posts = () => {
             </span>
           </div>
         </div>
-
-        {/* Comments Section */}
         {showComments && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -162,8 +149,6 @@ const Posts = () => {
                 <p className="text-gray-500 text-center">No comments yet.</p>
               )}
             </div>
-
-            {/* Add Comment Input */}
             <div className="w-full pt-3 flex items-center gap-2">
               <input
                 type="text"

@@ -4,14 +4,14 @@ import { Comics } from "../../../../types";
 import { Link } from "react-router-dom";
 import { FREECOMICS, FREEAUDIOCOMICS } from "../../../../constants/index";
 import { motion } from "framer-motion";
-import ComicApi from "../../../../api/comics";
+// import ComicApi from "../../../../api/comics";
 
 const FreeComics = ({
   comicType,
-  setLoading,
+  // setLoading,
 }: {
   comicType: "picture" | "audio";
-  setLoading: (val: boolean) => void;
+  // setLoading: (val: boolean) => void;
 }) => {
   const [comicList, setComicList] = useState<Comics[] | null>(null);
 

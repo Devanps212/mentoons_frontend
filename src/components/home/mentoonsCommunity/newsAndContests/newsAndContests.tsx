@@ -124,7 +124,7 @@ const NewsAndContests = () => {
           <div className="w-full p-5 max-h-full overflow-auto bg-white/90 rounded-md shadow-inner">
             {activeTab === "Mentoons Comics" ? (
               <FreeComics
-                setLoading={setIsLoading}
+                // setLoading={setIsLoading}
                 comicType={selectedComicType}
               />
             ) : (

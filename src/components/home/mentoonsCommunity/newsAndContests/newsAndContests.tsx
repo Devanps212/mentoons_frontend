@@ -14,9 +14,7 @@ const NewsAndContests = () => {
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => setIsLoading(false), 500);
-
-    console.log(selectedComicType);
-  }, [activeTab, selectedComicType]);
+  }, []);
 
   return (
     <div className="w-full h-[500px] border border-transparent border-t-0 bg-white rounded-xl overflow-hidden shadow-xl z-999">
@@ -91,16 +89,44 @@ const NewsAndContests = () => {
           </div>
         )}
       </div>
-      <div className="w-full h-[445px] relative z-999">
+      <div className="relative w-full h-[445px] z-999 bg-gradient-to-b from-sky-400 via-blue-300 to-blue-500 rounded-lg shadow-md overflow-hidden">
+        <img
+          src="/background/Vector.png"
+          alt="cloud"
+          className="absolute top-10 left-10 w-1/5"
+        />
+        <img
+          src="/background/rb_35675 copy 1.png"
+          alt="cloud"
+          className="absolute top-10 right-10 w-sm"
+        />
+        <img
+          src="/background/Group 566.png"
+          alt="cloud"
+          className="absolute top-10 right-5 w-24"
+        />
+        <img
+          src="/background/Vector.png"
+          alt="cloud"
+          className="absolute bottom-10 left-10 w-1/5"
+        />
+        <img
+          src="/background/Group 566.png"
+          alt="cloud"
+          className="absolute bottom-10 right-5 w-24"
+        />
         {isLoading ? (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/80 backdrop-blur-md rounded-lg">
             <ClipLoader color="#36d7b7" loading={true} size={50} />
-            <p className="akshar">Loading ...</p>
+            <p className="akshar text-gray-700">Loading ...</p>
           </div>
         ) : (
-          <div className="w-full p-5 max-h-full overflow-auto">
+          <div className="w-full p-5 max-h-full overflow-auto bg-white/90 rounded-md shadow-inner">
             {activeTab === "Mentoons Comics" ? (
-              <FreeComics comicType={selectedComicType} />
+              <FreeComics
+                setLoading={setIsLoading}
+                comicType={selectedComicType}
+              />
             ) : (
               <Contests />
             )}

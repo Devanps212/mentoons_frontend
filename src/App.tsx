@@ -1,11 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Adda from "./pages/adda";
-// import PrimaryHeader from "./components/primaryHeader/primaryHeader";
-// import Home from "./pages/home";
-// import SecondaryHeader from "./components/secondaryHeader/secondaryHeader";
 import "./app.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Loader from "./components/loader/loader";
+import Comic from "./components/home/comic/comic";
 
 const PrimaryHeader = lazy(
   () => import("./components/primaryHeader/primaryHeader")
@@ -25,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/adda" element={<Adda />} />
+          <Route path="/comic" element={<Comic />} />
         </Routes>
       </Suspense>
     </Router>

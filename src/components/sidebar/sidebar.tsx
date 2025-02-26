@@ -14,9 +14,11 @@ const Sidebar = ({
   handleMouseLeave,
   setIsOpen,
   handlePlans,
+  token,
 }: {
   isOpen: boolean;
   title: string;
+  token: string | null;
   dropdown: {
     comics: boolean;
     games: boolean;
@@ -130,7 +132,9 @@ const Sidebar = ({
         >
           Browse Plans
         </Link>
-        <FaUser className="text-white bg-[#500EAD] rounded-full p-4 sm:p-5 md:p-6 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 cursor-pointer" />
+        {token && (
+          <FaUser className="text-white bg-[#500EAD] rounded-full p-4 sm:p-5 md:p-6 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 cursor-pointer" />
+        )}
       </div>
     </motion.aside>
   );

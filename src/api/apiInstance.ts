@@ -1,4 +1,5 @@
-import axios, { AxiosError } from "axios";
+import axios, { AxiosError, AxiosResponse } from "axios";
+import { toast } from "sonner";
 
 const apiRequest = axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL,
@@ -9,12 +10,17 @@ const apiRequest = axios.create({
 });
 
 apiRequest.interceptors.response.use(
-  (response) => response,
+  (response: AxiosResponse) => response,
   (error: unknown) => {
     if (error instanceof AxiosError) {
-      console.log(error.response?.data);
+      const errorMessage = error.response?.data.message || error.message;
+      console.log(errorMessage || "Something went wrong!");
+      toast.error(errorMessage, {
+        duration: 4000,
+      });
     } else {
       console.log("Unknown error occurred", error);
+      toast.error("An unexpected error occurred!");
     }
 
     return Promise.reject(error);

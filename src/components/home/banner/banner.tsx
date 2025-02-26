@@ -8,6 +8,7 @@ const Banner = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
+      id="first-section"
       className="relative h-fit sm:min-h-screen flex flex-col justify-start lg:justify-center items-center gap-12 px-4 sm:px-8 lg:px-12 p-6 sm:p-6"
     >
       <motion.div

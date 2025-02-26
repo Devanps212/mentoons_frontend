@@ -16,7 +16,7 @@ const BottomNav = ({
   >;
 }) => {
   return (
-    <div className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center gap-10 bg-white border border-gray-300 p-0 h-12">
+    <div className="md:hidden fixed bottom-0 left-0 w-full flex justify-between items-center px-4 bg-white border-t border-gray-300 h-14">
       <div className="relative" onClick={() => setActive("notification")}>
         <button className="relative outline-none cursor-pointer p-2">
           <FiBell className="text-3xl" />
@@ -47,9 +47,9 @@ const BottomNav = ({
         </button>
       </div>
 
-      <div>
+      <div className="relative">
         <button className="outline-none cursor-pointer p-2">
-          <FaUser className="text-2xl" />
+          <FaUser className="text-3xl" />
         </button>
       </div>
     </div>

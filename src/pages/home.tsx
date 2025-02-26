@@ -3,6 +3,7 @@ import Banner from "../components/home/banner/banner";
 import Membership from "../components/home/membership/membership";
 import Community from "../components/home/mentoonsCommunity/communityHome/community";
 import NewsSubscription from "../components/home/newsSubscription/newsSubscription";
+import TopUpArrow from "../components/topUpArrrow/topUpArrow";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Community />
       <Membership />
       <NewsSubscription />
+      <TopUpArrow />
     </main>
   );
 };

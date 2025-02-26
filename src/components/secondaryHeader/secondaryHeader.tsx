@@ -21,6 +21,7 @@ import Sidebar from "../sidebar/sidebar";
 const SecondaryHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [sidebarOpen, setSideBarOpen] = useState(false);
+
   const location = useLocation();
   const navigate = useNavigate();
   const title = location.pathname === "/adda" ? "adda" : "home";

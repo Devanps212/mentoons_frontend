@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import FriendRequest from "../components/adda/friendRequest/friendRequest";
-import Meme from "../components/adda/memeOfTheDay/meme";
-import UserStatus from "../components/adda/userStatus/userStatus";
-import AddPosts from "../components/adda/addPosts/addPosts";
-import Posts from "../components/adda/addPosts/posts/posts";
-import Influencer from "../components/adda/influencer/influencer";
-import FounderNote from "../components/home/founderNote/founderNote";
-import BottomNav from "../components/adda/bottomNav/bottomNav";
-import Notification from "../components/adda/notifications/notification";
+import FriendRequest from "../../components/adda/home/friendRequest/friendRequest";
+import Meme from "../../components/adda/home/memeOfTheDay/meme";
+import UserStatus from "../../components/adda/home/userStatus/userStatus";
+import AddPosts from "../../components/adda/home/addPosts/addPosts";
+import Posts from "../../components/adda/home/addPosts/posts/posts";
+import Influencer from "../../components/adda/home/influencer/influencer";
+import FounderNote from "../../components/home/founderNote/founderNote";
+import BottomNav from "../../components/adda/home/bottomNav/bottomNav";
+import Notification from "../../components/adda/home/notifications/notification";
 
 const Adda = () => {
   const [mobile, setMobile] = useState(window.innerWidth < 768);

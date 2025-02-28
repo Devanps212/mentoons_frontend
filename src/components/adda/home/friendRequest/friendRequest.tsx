@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { FRIEND_REQUEST } from "../../../constants";
-import { RequestInterface } from "../../../types";
+import { FRIEND_REQUEST } from "../../../../constants";
+import { RequestInterface } from "../../../../types";
 import "./friendRequest.css";
 
 const FriendRequest = () => {

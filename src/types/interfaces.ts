@@ -52,3 +52,11 @@ export interface Membership {
   character: string;
   type: string;
 }
+
+export interface GroupCards {
+  img: string;
+  mainTitle: string;
+  subTitle: string;
+  description: string;
+  bg: string;
+}

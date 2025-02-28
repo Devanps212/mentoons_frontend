@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PHOTO_POST } from "../../../constants";
+import { PHOTO_POST } from "../../../../constants";
 import PostUpload from "../modal/postUpload";
 
 const AddPosts = () => {

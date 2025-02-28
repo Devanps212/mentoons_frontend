@@ -4,7 +4,7 @@ import Likes from "../likes/likes";
 import { FaRegBookmark } from "react-icons/fa6";
 import Share from "../share/share";
 import { motion } from "framer-motion";
-import Highlight from "../../../modal/highlight";
+import Highlight from "../../../../modal/highlight";
 
 const Posts = () => {
   const [showComments, setShowComments] = useState(false);

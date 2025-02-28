@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { UserStatusInterface } from "../../../types";
+import { UserStatusInterface } from "../../../../types";
 import { FaPlus } from "react-icons/fa";
-import { STATUSES } from "../../../constants";
+import { STATUSES } from "../../../../constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { FreeMode } from "swiper/modules";
-import Status from "../../modal/status";
+import Status from "../../../modal/status";
 // import axios, { AxiosError } from "axios";
 
 const UserStatus = () => {
@@ -74,7 +74,7 @@ const UserStatus = () => {
             {statuses.map((user, index) => (
               <>
                 <SwiperSlide
-                  key={index}
+                  key={index + 1}
                   className="!w-fit flex flex-col gap-1 flex-shrink-0"
                   style={{ justifyItems: "center" }}
                 >

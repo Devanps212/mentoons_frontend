@@ -1,5 +1,7 @@
 import Explore from "../../components/adda/groups/explore";
+import NeedsAndMentalHealth from "../../components/adda/groups/needsAndMentalHealth";
 import Parents from "../../components/adda/groups/parents";
+import SocialInterest from "../../components/adda/groups/socialInterest";
 import Specialized from "../../components/adda/groups/specializedRole";
 
 const Groups = () => {
@@ -9,6 +11,8 @@ const Groups = () => {
         <Parents />
         <Explore />
         <Specialized />
+        <SocialInterest />
+        <NeedsAndMentalHealth />
       </div>
     </div>
   );

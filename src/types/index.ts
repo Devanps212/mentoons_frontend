@@ -10,6 +10,7 @@ import {
 } from "./interfaces";
 import { Auth } from "./auth/interface";
 import { Color } from "./types";
+import { Groups } from "./groups/groups";
 
 export type {
   UserStatusInterface,
@@ -17,6 +18,7 @@ export type {
   GameData,
   DropDownInterface,
   Color,
+  Groups,
   Community,
   Comics,
   Membership,

@@ -202,10 +202,15 @@ const SecondaryHeader = () => {
         </a>
         <Link
           to="/adda/groups"
-          className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1 whitespace-nowrap"
+          className="relative bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1 whitespace-nowrap"
         >
-          Groups and Community
+          <span className="lg:block hidden">Mentoons Community</span>
+          <FaUsers className="lg:hidden block text-xl" />
+          <span className="absolute -top-2 -right-7 px-2 py-0.5 bg-red-500 rounded-full text-[10px]">
+            Join
+          </span>
         </Link>
+
         {user && (
           <FaUser className="text-white bg-[#500EAD] rounded-full cursor-pointer p-1 md:p-2 lg:p-2 w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9" />
         )}

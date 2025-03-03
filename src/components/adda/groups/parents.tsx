@@ -59,8 +59,21 @@ const Parents = () => {
             bottom: auto;
             margin-top: 20px;
           }
+          
+          .swiper-button-next {
+            width: 30px;
+            height: 30px;
+            top:45%
+          }
+
+          .swiper-button-prev {
+            width: 30px;
+            height: 30px;
+            top:45%
+          }
         `}
       </style>
+
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}

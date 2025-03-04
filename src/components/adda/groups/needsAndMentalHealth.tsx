@@ -3,7 +3,7 @@ import GroupCards from "../cards/cards";
 const NeedsAndMentalHealth = () => {
   const specializedRole = [
     {
-      img: "/groups/explore/Man helping friend to stand up.png",
+      img: "/groups/specialNeeds/autisticKids.png",
       mainTitle: "AUTISTIC KIDS",
       subTitle: "Autistic Kids",
       description:
@@ -11,7 +11,7 @@ const NeedsAndMentalHealth = () => {
       bg: "#F7941D",
     },
     {
-      img: "/groups/explore/Psychologist.png",
+      img: "/groups/specialNeeds/Depression .png",
       mainTitle: "Depression",
       subTitle: "Depression and Anxiety Support",
       description:
@@ -19,7 +19,7 @@ const NeedsAndMentalHealth = () => {
       bg: "#4285F4",
     },
     {
-      img: "/groups/explore/teachers.png",
+      img: "/groups/specialNeeds/stressManagement.png",
       mainTitle: "Stress Managment",
       subTitle: "Stress Management",
       description:

@@ -3,25 +3,25 @@ import GroupCards from "../cards/cards";
 const SocialInterest = () => {
   const interests = [
     {
-      img: "/groups/explore/age 2-5.png",
+      img: "/groups/socialInterests/Social media on different devices.png",
       mainTitle: "Social Media Enthusiasts",
       subTitle: "Social Media Enthusiasts",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       bg: "#F7941D",
     },
     {
-      img: "/groups/explore/age 2-5.png",
+      img: "/groups/socialInterests/Gaming .png",
       mainTitle: "Gamers and Influencers",
       subTitle: "Gamers and Influencers",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      bg: "#F7941D",
+      bg: "#652D90",
     },
     {
-      img: "/groups/explore/age 2-5.png",
+      img: "/groups/socialInterests/flavors exploration illustration.png",
       mainTitle: "Cooking Enthusiasts",
       subTitle: "Cooking Enthusiasts",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      bg: "#F7941D",
+      bg: "#4285F4",
     },
   ];
 

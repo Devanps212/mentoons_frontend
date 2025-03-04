@@ -3,28 +3,28 @@ import GroupCards from "../cards/cards";
 const ExAddicts = () => {
   const ExAddicts = [
     {
-      img: "/groups/explore/age 2-5.png",
+      img: "/groups/support/Ex addict 1.png",
       mainTitle: "EX-ADDICTS SUPPORT",
       subTitle: "Ex-Addicts Support Groups",
       description:
         "Share recovery journeys and build resilience with like-minded individuals.",
-      bg: "#F7941D",
+      bg: "#652D90",
     },
     {
-      img: "/groups/explore/age 2-5.png",
+      img: "/groups/support/Professional growth 1.png",
       mainTitle: "PROFESSIONAL GROWTH",
       subTitle: "Professional Growth",
       description:
         "Career Corner: Network, seek advice, and explore new opportunities.",
-      bg: "#F7941D",
+      bg: "#FF9414",
     },
     {
-      img: "/groups/explore/age 2-5.png",
+      img: "/groups/support/parentGuidance.png",
       mainTitle: "PARENTING GUIDANCE",
       subTitle: "Parenting Guidance",
       description:
         "Learn and share strategies for effective and compassionate parenting.",
-      bg: "#F7941D",
+      bg: "#4285F4",
     },
   ];
 

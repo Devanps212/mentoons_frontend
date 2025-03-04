@@ -9,6 +9,7 @@ import { FREECOMICS, FREEAUDIOCOMICS } from "./freeComics";
 import { PODCAST } from "./podcast";
 import { PLATINUM, PRIME } from "./membership";
 import { PHOTO_POST } from "./posts";
+import { PLANETS } from "./planets";
 
 export {
   PHOTO_POST,
@@ -27,6 +28,7 @@ export {
   FREECOMICS,
   FREEAUDIOCOMICS,
   PODCAST,
+  PLANETS,
   PRIME,
   PLATINUM,
 };

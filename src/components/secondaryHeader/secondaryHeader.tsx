@@ -27,7 +27,7 @@ const SecondaryHeader = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const title = location.pathname === "/adda" ? "adda" : "home";
+  const title = location.pathname.startsWith("/adda") ? "adda" : "home";
   const [dropdown, setDropDown] = useState<DropDownInterface>({
     games: false,
     comics: false,
@@ -97,11 +97,14 @@ const SecondaryHeader = () => {
         </a>
         {title === "adda" ? (
           <Link
-            to="#"
-            className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
+            to="/adda/groups"
+            className="relative bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
           >
             <FaUsers className="hidden sm:block sm:text-sm md:text-lg" />
-            Mentoons Community
+            <span className="lg:block hidden">Mentoons Community</span>
+            <span className="absolute -top-2 -right-7 px-2 py-0.5 bg-red-500 rounded-full text-[10px]">
+              Join
+            </span>
           </Link>
         ) : (
           <NavButton
@@ -200,17 +203,6 @@ const SecondaryHeader = () => {
           <FaCreditCard className="hidden sm:block sm:text-sm md:text-lg" />
           Browse Plans
         </a>
-        <Link
-          to="/adda/groups"
-          className="relative bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1 whitespace-nowrap"
-        >
-          <span className="lg:block hidden">Mentoons Community</span>
-          <FaUsers className="lg:hidden block text-xl" />
-          <span className="absolute -top-2 -right-7 px-2 py-0.5 bg-red-500 rounded-full text-[10px]">
-            Join
-          </span>
-        </Link>
-
         {user && (
           <FaUser className="text-white bg-[#500EAD] rounded-full cursor-pointer p-1 md:p-2 lg:p-2 w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9" />
         )}

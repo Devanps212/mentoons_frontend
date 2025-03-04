@@ -4,7 +4,8 @@ import MembershipCard from "./cards/membershipCard";
 import useInView from "../../../customHooks/useInView";
 
 const Membership = () => {
-  const { ref: sectionRef, isInView } = useInView(0.3, false);
+  const isMobile = window.innerWidth < 768;
+  const { ref: sectionRef, isInView } = useInView(isMobile ? 0.1 : 0.3, false);
 
   return (
     <section className="relative p-6 md:p-10 flex flex-col justify-center overflow-hidden items-center bg-white">

@@ -11,6 +11,7 @@ import {
 import { Auth } from "./auth/interface";
 import { Color } from "./types";
 import { Groups } from "./groups/groups";
+import { MythosCardProps } from "./mythos/interface";
 
 export type {
   UserStatusInterface,
@@ -20,6 +21,7 @@ export type {
   Color,
   Groups,
   Community,
+  MythosCardProps,
   Comics,
   Membership,
   Auth,

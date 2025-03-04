@@ -74,12 +74,6 @@ const Sidebar = ({
               to="#"
               className="text-white text-2xl sm:text-3xl md:text-4xl flex items-center gap-2"
             >
-              Mentoons Community
-            </Link>
-            <Link
-              to="#"
-              className="text-white text-2xl sm:text-3xl md:text-4xl flex items-center gap-2"
-            >
               Collect Points
             </Link>
             <Link
@@ -87,6 +81,12 @@ const Sidebar = ({
               className="text-white text-2xl sm:text-3xl md:text-4xl flex items-center gap-2"
             >
               Products
+            </Link>
+            <Link
+              to="/adda/groups"
+              className="text-white text-2xl sm:text-3xl md:text-4xl flex items-center gap-2"
+            >
+              Mentoons Community
             </Link>
           </>
         ) : (

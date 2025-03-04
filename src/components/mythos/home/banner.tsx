@@ -2,7 +2,7 @@ import MythosButton from "./button";
 
 const MythosBanner = () => {
   return (
-    <section className="w-full max-h-screen flex justify-center items-center py-10 bg-[#1A1D3B] mulish bg-[url('/public/background/mythos/section/stars_background.png')] bg-center px-20">
+    <section className="w-full max-h-screen flex justify-center items-center py-10 bg-[#1A1D3B] mulish bg-[url('/background/mythos/section/stars_background.png')] bg-center px-20">
       <div className="space-y-5 p-5 text-center flex flex-col justify-center items-center">
         <h1 className="text-[#E39712] font-semibold text-[54px] tracking-[1.9px] montserrat">
           LET THE PLANETS GUIDE YOUR CAREER

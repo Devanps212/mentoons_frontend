@@ -8,9 +8,9 @@ const MythosHeader = () => {
       <nav className="max-w-full px-10 flex justify-between items-center">
         <Link to="/mythos">
           <img
-            src="/logo/mythos/logo.png"
+            src="/logo/mythos/Logo 2.png"
             alt="company logo"
-            className="h-12 w-auto"
+            className="h-15 w-15"
           />
         </Link>
 

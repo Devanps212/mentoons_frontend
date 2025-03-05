@@ -1,26 +1,52 @@
+import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import { JoinCardsProps } from "../../../types";
 
-const JoinCards = () => {
+const JoinCards = ({
+  cards,
+  index,
+}: {
+  cards: JoinCardsProps;
+  index: number;
+}) => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="w-1/4 p-5 mt-5 bg-[#E39712] rounded-xl flex flex-col items-center gap-7 text-center">
-        <img
-          src="/icons/mythos/joinOurGroups/Book with information on astrology and the influence of the moon on personality.png"
-          alt="icon"
-          className="w-42"
-        />
-        <h1 className="font-semibold text-gray-800 text-lg">ASTROLOGY</h1>
-        <p className="font-normal text-white text-base">
-          Astrologers study how celestial bodies influence human behavior, using
-          birth charts to predict events and provide guidance. Specializing in
-          areas like relationships and career, they offer readings and advice
-          based on planetary alignments.
+    <motion.div
+      className="flex justify-center min-fit outfit"
+      key={index}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
+      <motion.div
+        className="w-[350px] h-[450px] p-5 bg-[#E39712] rounded-xl flex flex-col items-center gap-5 text-center cursor-pointer"
+        whileHover={{
+          scale: 1.05,
+          boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="h-[150px] flex items-center justify-center">
+          <img
+            src={cards.img}
+            alt="icon"
+            className="max-w-[150px] max-h-[200px] object-contain"
+          />
+        </div>
+        <h1 className="font-semibold text-gray-800 text-lg h-[30px]">
+          {cards.name}
+        </h1>
+        <p className="font-normal text-white text-base h-fit">
+          {cards.description}
         </p>
-        <span className=" w-full flex justify-end items-center gap-2 font-medium text-base ">
+        <motion.span
+          className="w-full flex justify-end items-center gap-2 font-light text-base text-[#1A1D3B]"
+          whileHover={{ x: 5 }}
+          transition={{ duration: 0.2 }}
+        >
           View More <FaArrowRight />
-        </span>
-      </div>
-    </div>
+        </motion.span>
+      </motion.div>
+    </motion.div>
   );
 };
 

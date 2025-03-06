@@ -1,0 +1,32 @@
+import ReactPlayer from "react-player";
+
+const AboutMythos = () => {
+  return (
+    <section className="w-full h-auto px-6 py-10 flex flex-col justify-center items-center text-center md:text-left bg-[#1A1D3B] bg-[url('/background/mythos/section/stars_background.png')] bg-center bg-cover">
+      <h1 className="text-[#E39712] font-semibold text-3xl sm:text-4xl md:text-[36px] montserrat mb-6 tracking-[2.5px]">
+        ABOUT MENTOONS MYTHOS
+      </h1>
+      <p className="mulish text-base sm:text-lg md:text-xl max-w-[90%] md:max-w-[51%] text-white text-center leading-relaxed">
+        Mentoons Mythos isn’t just about reports; it’s a thriving community of
+        individuals seeking purpose, clarity, and cosmic guidance. Whether
+        you’re exploring astrology, psychology, or career growth, our groups
+        help you connect with like-minded people who share your journey.
+      </p>
+
+      <div className="w-full sm:w-[80%] md:w-3/4 mt-20">
+        <div className="relative w-full pb-[56.25%]">
+          <ReactPlayer
+            url="/video/addiction/We know THE STRUGGLES our youth is facing_03.mp4"
+            className="absolute top-0 left-0"
+            width="100%"
+            height="80%"
+            controls
+            playing={false}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutMythos;

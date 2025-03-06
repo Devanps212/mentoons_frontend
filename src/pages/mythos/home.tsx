@@ -3,7 +3,6 @@ import BlogsForYou from "../../components/mythos/home/blogsForYou";
 import CosmicInfluence from "../../components/mythos/home/cosmicInfluence";
 import MythosFooter from "../../components/mythos/home/footer";
 import HowItHelps from "../../components/mythos/home/howItHelps";
-import JoinOurGropus from "../../components/mythos/home/joinOurGropus";
 import MembershipPlans from "../../components/mythos/home/membershipPlans";
 import PersonalReport from "../../components/mythos/home/personalReport";
 import SignUpSection from "../../components/mythos/home/signUp";
@@ -19,7 +18,6 @@ const Home = () => {
       <StepsGuide />
       <HowItHelps />
       <Testimonials />
-      <JoinOurGropus />
       <BlogsForYou />
       <MembershipPlans />
       <SignUpSection />

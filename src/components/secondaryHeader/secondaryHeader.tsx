@@ -85,7 +85,7 @@ const SecondaryHeader = () => {
           <FaPhone /> <span> +91 90360 33300</span>
         </div>
       </a>
-      <div
+      <nav
         className={`w-auto lg:w-1/2 ${
           title === "adda" ? "hidden lg:flex" : "hidden md:flex"
         } justify-center items-center gap-3 md:gap-10`}
@@ -142,7 +142,7 @@ const SecondaryHeader = () => {
             {dropdown.products && <DropDown items={PRODUCTS} />}
           </NavButton>
         )}
-      </div>
+      </nav>
       <div className="flex justify-center">
         <Link to="/">
           <img
@@ -174,7 +174,7 @@ const SecondaryHeader = () => {
         )}
       </motion.div>
 
-      <div
+      <nav
         className={`w-fit lg:w-1/2 ${
           title === "adda" ? "hidden lg:flex" : "hidden md:flex"
         } justify-evenly items-center gap-2 md:gap-5`}
@@ -206,7 +206,7 @@ const SecondaryHeader = () => {
         {user && (
           <FaUser className="text-white bg-[#500EAD] rounded-full cursor-pointer p-1 md:p-2 lg:p-2 w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9" />
         )}
-      </div>
+      </nav>
       <Sidebar
         token={user}
         isOpen={sidebarOpen}

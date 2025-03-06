@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import MythosButton from "./button";
 
 const MythosBanner = () => {
   return (
-    <section className="relative w-full h-screen flex justify-center items-center py-10 bg-[#1A1D3B] mulish px-20 overflow-hidden">
+    <section className="relative w-full h-screen flex justify-center items-center py-6 sm:py-8 md:py-10 bg-[#1A1D3B] mulish px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
       <video
         autoPlay
         loop
@@ -16,21 +17,44 @@ const MythosBanner = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="relative space-y-5 p-5 text-center flex flex-col justify-center items-center">
-        <h1 className="text-[#E39712] font-semibold text-[54px] tracking-[1.9px] montserrat">
+      <div className="relative space-y-3 sm:space-y-4 md:space-y-5 p-3 sm:p-4 md:p-5 text-center flex flex-col justify-center items-center w-full">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-[#E39712] font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] tracking-[1.5px] sm:tracking-[1.9px] montserrat px-2"
+        >
           LET THE PLANETS GUIDE YOUR CAREER
-        </h1>
-        <p className="font-semibold text-2xl w-[45%] text-white">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl w-full sm:w-4/5 md:w-3/4 lg:w-3/5 xl:w-[45%] text-white"
+        >
           Feeling stuck in life? Let your birth sign find solutions to all your
           problems
-        </p>
-        <div className="flex justify-center mt-10">
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className="flex justify-center mt-4 sm:mt-6 md:mt-8 lg:mt-10"
+        >
           <MythosButton label="FIND YOUR PATH" />
-        </div>
-        <img
+        </motion.div>
+        <motion.img
           src="/icons/mythos/Subtract.png"
           alt="subtract-icon"
-          className="h-44 w-44 mt-25 drop-shadow-[0px_10px_0px_rgba(200,200,200,0.3)]"
+          initial={{ y: 0 }}
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+          className="h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-44 lg:w-44 mt-6 sm:mt-8 md:mt-10 lg:mt-16 drop-shadow-[0px_10px_0px_rgba(200,200,200,0.3)]"
         />
       </div>
     </section>

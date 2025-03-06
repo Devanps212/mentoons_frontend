@@ -1,24 +1,56 @@
+import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import MythosSidebar from "./sidebar";
+import { useEffect, useState } from "react";
 
 const MythosHeader = () => {
-  const headerText = ["HOME", "CAREER", "GROUPS", "WORKSHOPS", "BLOG", "SHOP"];
+  const headerText = [
+    "HOME",
+    "CAREER",
+    "GROUPS",
+    "WORKSHOPS",
+    "BLOG",
+    "SHOP",
+    "ABOUT",
+  ];
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="w-full p-5 bg-[#E39712]">
-      <nav className="max-w-full px-10 flex justify-between items-center">
+    <header
+      className={`w-full p-2 bg-[#E39712] z-50 ${
+        isScrolled ? "fixed top-0 left-0 shadow-lg" : "relative"
+      }`}
+    >
+      <nav className="max-w-full px-6 md:px-10 flex justify-between items-center">
         <Link to="/mythos">
           <img
             src="/logo/mythos/Logo 2.png"
             alt="company logo"
-            className="h-15 w-15"
+            className="h-14 md:h-20 w-auto"
           />
         </Link>
 
-        <ul className="flex items-center gap-8 mulish text-white">
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8 mulish text-white">
           {headerText.map((text, index) => (
             <li
               key={index}
-              className="relative mulish font-bold text-sm tracking-[1.5px] group"
+              className="relative font-bold text-sm tracking-[1.5px] group"
             >
               <Link
                 to={
@@ -33,34 +65,63 @@ const MythosHeader = () => {
           ))}
         </ul>
 
-        <div className="flex justify-center items-center gap-5">
-          <button className="flex justify-center items-center rounded-full w-12 h-12 outline-dashed outline-2 outline-gray-600 cursor-pointer">
+        <div className="flex items-center gap-3 sm:gap-5">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.2, ease: "easeIn" }}
+            aria-label="Search"
+            className="flex justify-center items-center rounded-full w-10 h-10 sm:w-12 sm:h-12 outline-dashed outline-2 outline-gray-600 cursor-pointer"
+          >
             <img
               src="/icons/mythos/Vector.png"
               alt="search-icon"
-              className="w-6 h-6"
+              className="w-5 sm:w-6 h-5 sm:h-6"
             />
-          </button>
-
-          <button className="relative flex justify-center items-center rounded-full w-12 h-12 outline-dashed outline-2 outline-gray-600 cursor-pointer">
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.2, ease: "easeIn" }}
+            aria-label="View cart"
+            className="relative flex justify-center items-center rounded-full w-10 h-10 sm:w-12 sm:h-12 outline-dashed outline-2 outline-gray-600 cursor-pointer"
+          >
             <img
               src="/icons/mythos/Vector (1).png"
-              alt="search-icon"
-              className="w-6 h-6"
+              alt="cart-icon"
+              className="w-5 sm:w-6 h-5 sm:h-6"
             />
-            <span className="absolute -top-2 right-0 border-[#E39712] w-5 h-5 bg-[#E39712] rounded-full text-white">
+            <span className="absolute -top-2 right-0 border-[#E39712] w-4 sm:w-5 h-4 sm:h-5 bg-[#E39712] rounded-full text-white flex items-center justify-center text-xs">
               0
             </span>
-          </button>
-          <button className="flex justify-center items-center rounded-full w-12 h-12 outline-dashed outline-2 outline-gray-600 cursor-pointer">
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.2, ease: "easeIn" }}
+            aria-label="View more"
+            className="flex justify-center items-center rounded-full w-10 h-10 sm:w-12 sm:h-12 outline-dashed outline-2 outline-gray-600 cursor-pointer"
+          >
             <img
               src="/icons/mythos/Vector (2).png"
-              alt="search-icon"
-              className="w-8 h-8"
+              alt="view-icon"
+              className="w-6 sm:w-8 h-6 sm:h-8"
             />
-          </button>
+          </motion.button>
+          <motion.button
+            whileHover={{ rotate: 360 }}
+            whileTap={{ scale: 1.1 }}
+            transition={{ duration: 0.4 }}
+            aria-label="Toggle menu"
+            onClick={() => setSidebarOpen((prev) => !prev)}
+            className="lg:hidden flex justify-center items-center rounded-full w-10 h-10 sm:w-12 sm:h-12 outline-dashed outline-2 outline-gray-600 cursor-pointer text-white"
+          >
+            <FaBars className="text-lg sm:text-xl" />
+          </motion.button>
         </div>
       </nav>
+      <MythosSidebar
+        isOpen={isSidebarOpen}
+        navItems={headerText}
+        setSidebar={setSidebarOpen}
+      />
     </header>
   );
 };

@@ -40,8 +40,8 @@ const UserStatus = () => {
   // }, []);
 
   return (
-    <section className="relative max-w-[95%]">
-      <div className="flex w-full items-center gap-5 overflow-x-auto scrollbar-hide">
+    <section className="relative w-[95%] sm:max-w-[83%]">
+      <div className="flex justify-center items-center gap-5 overflow-x-auto scrollbar-hide">
         <div className="flex flex-col justify-center items-center gap-1 flex-shrink-0">
           <label
             htmlFor="upload"

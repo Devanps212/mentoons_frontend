@@ -5,15 +5,7 @@ import MythosSidebar from "./sidebar";
 import { useEffect, useState } from "react";
 
 const MythosHeader = () => {
-  const headerText = [
-    "HOME",
-    "CAREER",
-    "GROUPS",
-    "WORKSHOPS",
-    "BLOG",
-    "SHOP",
-    "ABOUT",
-  ];
+  const headerText = ["HOME", "GROUPS", "BLOG", "ABOUT"];
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -53,9 +45,7 @@ const MythosHeader = () => {
               className="relative font-bold text-sm tracking-[1.5px] group"
             >
               <Link
-                to={
-                  text === "HOME" ? "/mythos" : `/mythos/${text.toLowerCase()}`
-                }
+                to={text === "HOME" ? "/" : `/mythos/${text.toLowerCase()}`}
                 className="relative"
               >
                 {text}

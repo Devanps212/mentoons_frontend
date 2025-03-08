@@ -1,26 +1,69 @@
 import { PROBLEMS_FACED } from "../../../constants";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Navigation, Autoplay, Pagination, EffectCards } from "swiper/modules";
+import "swiper/swiper-bundle.css";
 
 const ProblemCard = () => {
   return (
-    <div className="w-full flex flex-wrap justify-between gap-6">
-      {PROBLEMS_FACED.map((data, index) => (
-        <div
-          key={index}
-          className="w-80 h-80 p-5 rounded-lg flex flex-col justify-center items-center"
-          style={{ backgroundColor: data.color }}
-        >
-          <div className="w-[100%] h-[75%]">
-            <img
-              src={data.img}
-              alt={data.text}
-              className="w-full h-full object-fill rounded-md"
-            />
-          </div>
-          <h1 className="inter font-semibold text-lg text-white text-center mt-3">
-            {data.text}
-          </h1>
-        </div>
-      ))}
+    <div className="w-full px-4 py-8">
+      <Swiper
+        modules={[Navigation, Autoplay, Pagination, EffectCards]}
+        spaceBetween={30}
+        navigation
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        loop
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        className="w-full"
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        }}
+      >
+        {PROBLEMS_FACED.map((data, index) => (
+          <SwiperSlide
+            key={index}
+            className="flex justify-center items-center py-6"
+          >
+            <div
+              className="w-full h-80 p-5 rounded-xl flex flex-col justify-center items-center shadow-xl transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]"
+              style={{ backgroundColor: data.color }}
+            >
+              <div className="w-full h-3/4 flex justify-center items-center overflow-hidden rounded-lg">
+                <img
+                  src={data.img}
+                  alt={data.text}
+                  className="w-full h-full object-cover rounded-md transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="mt-4 w-full">
+                <h1 className="inter font-bold text-xl text-white text-center px-2 leading-tight">
+                  {data.text}
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

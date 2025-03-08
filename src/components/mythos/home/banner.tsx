@@ -43,19 +43,6 @@ const MythosBanner = () => {
         >
           <MythosButton label="FIND YOUR PATH" />
         </motion.div>
-        <motion.img
-          src="/icons/mythos/Subtract.png"
-          alt="subtract-icon"
-          initial={{ y: 0 }}
-          animate={{ y: [0, -10, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut",
-          }}
-          className="h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-44 lg:w-44 mt-6 sm:mt-8 md:mt-10 lg:mt-16 drop-shadow-[0px_10px_0px_rgba(200,200,200,0.3)]"
-        />
       </div>
     </section>
   );

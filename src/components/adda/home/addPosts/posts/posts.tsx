@@ -20,9 +20,9 @@ const Posts = () => {
   const postDetails = {
     title: "Hardik's Post",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+      "Showing anger, frustration, insecurity in situations does not have good impression on the child. Parents should think before they react to any situation specially in front of their children learn from there behavior and so parents have to be good role models for them.",
     postUrl: "https://example.com/posts/123",
-    imageUrl: "/deleteItAtIntegration/post image.png",
+    imageUrl: "/adda/post/8.jpg",
     author: "Hardik",
     role: "Teacher at Divim Technology",
     timestamp: "25 Nov at 12:24 PM",

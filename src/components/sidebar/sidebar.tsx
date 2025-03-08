@@ -132,6 +132,16 @@ const Sidebar = ({
         >
           Browse Plans
         </Link>
+        <Link
+          to="/mythos"
+          className="relative flex items-center gap-2 text-white font-semibold text-3xl sm:text-4xl md:text-5xl"
+          role="button"
+        >
+          Mythos
+          <span className="absolute -top-3 -left-1/2 -translate-x-1/3 px-3 py-1 rounded-full bg-red-500 text-[13px]">
+            Introducing
+          </span>
+        </Link>
         {token && (
           <FaUser className="text-white bg-[#500EAD] rounded-full p-4 sm:p-5 md:p-6 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 cursor-pointer" />
         )}

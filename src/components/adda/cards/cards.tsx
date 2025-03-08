@@ -49,8 +49,8 @@ const GroupCards = ({
       {type === "parents" && (
         <div className="p-5 rounded-4xl border border-black shadow-lg w-3/4 h-fit flex flex-col justify-end self-end mx-auto">
           <h1 className="font-semibold text-5xl leading-10">
-            Create your{" "}
-            <span className="text-[#EC9600]">own group for Parents!</span>
+            Create your
+            <span className="text-[#EC9600]">own group and invite Friends</span>
           </h1>
           <p className="inter leading-6 text-base mt-2">
             Have a unique interest, challenge, or idea that isn’t represented in

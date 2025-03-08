@@ -40,7 +40,7 @@ const Explore = () => {
   return (
     <div className="w-full px-4 py-6 md:px-8 lg:px-12">
       <h1 className="w-full text-left font-semibold text-3xl md:text-4xl">
-        Explore Our <span className="text-[#F7941D]">Group</span>
+        Explore Our <span className="text-[#F7941D]">Groups</span>
       </h1>
       <GroupCards cardData={exploreGroups} type="parents" />
     </div>

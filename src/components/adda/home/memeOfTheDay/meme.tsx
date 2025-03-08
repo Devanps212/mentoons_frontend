@@ -1,6 +1,6 @@
 const Meme = () => {
   return (
-    <div className="flex flex-col justify-center items-center p-2 shadow-xl w-full rounded-lg">
+    <div className="flex flex-col justify-center items-center p-2 shadow-xl w-full">
       <div className="flex justify-start items-start gap-3 w-full">
         <img
           src="/emojis/e62353b3daac244b2443ebe94d0d8343.png"

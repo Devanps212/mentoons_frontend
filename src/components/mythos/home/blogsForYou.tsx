@@ -25,9 +25,6 @@ const BlogsForYou = () => {
           <h1 className="montserrat font-semibold text-2xl sm:text-4xl tracking-[2.5px] text-[#E39712]">
             BLOGS FOR YOU
           </h1>
-          <h4 className="mulish text-[8px] md:text-sm tracking-[1.43px] text-white mt-2">
-            FOR MEMBERS-ONLY
-          </h4>
         </div>
         <Discover label="LEARN MORE" />
       </motion.div>

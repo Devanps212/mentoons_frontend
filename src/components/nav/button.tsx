@@ -45,6 +45,11 @@ const NavButton = ({
       >
         <span className="hidden sm:block">{ICONS[menuKey]}</span>
         {label}
+        {label === "Games" && (
+          <span className="absolute -top-1/4 -left-1/5 -translate-x-1/5 bg-red-500 rounded-full px-2 text-[10px]">
+            Free
+          </span>
+        )}
       </button>
       <AnimatePresence>{children}</AnimatePresence>
     </div>

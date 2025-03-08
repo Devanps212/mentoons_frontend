@@ -8,6 +8,7 @@ import Influencer from "../../components/adda/home/influencer/influencer";
 import FounderNote from "../../components/home/founderNote/founderNote";
 import BottomNav from "../../components/adda/home/bottomNav/bottomNav";
 import Notification from "../../components/adda/home/notifications/notification";
+import { Link } from "react-router-dom";
 
 const Adda = () => {
   const [mobile, setMobile] = useState(window.innerWidth < 768);
@@ -37,7 +38,16 @@ const Adda = () => {
     <>
       <main className="flex justify-center items-start w-full p-4 sm:p-6 gap-4 sm:gap-8">
         <div className="flex flex-col w-full gap-6 sm:gap-8">
-          <UserStatus />
+          <div className="flex justify-between items-center">
+            <UserStatus />
+            <Link to="/mythos" className="hidden md:block">
+              <img
+                src="/background/adda/Introducing poster.png"
+                alt="mentoons-mythos"
+                className="w-full"
+              />
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
             <div className="hidden lg:flex col-span-1 items-start justify-start p-4 bg-white rounded-lg shadow-xl h-fit">
               <FounderNote scroll={true} />
@@ -69,8 +79,8 @@ const Adda = () => {
                   <AddPosts />
                   <Posts />
                 </div>
-                <div className="col-span-1 flex flex-col gap-6">
-                  <div className="shadow-lg p-2 md:p-4 rounded-lg bg-white">
+                <div className="col-span-1 flex flex-col gap-6 shadow-lg max-h-[80vh] overflow-auto sticky top-24">
+                  <div className="p-2 md:p-4 rounded-lg bg-white">
                     <FriendRequest />
                   </div>
                   <Influencer />

@@ -6,6 +6,7 @@ import {
   FaBars,
   FaCoins,
   FaCreditCard,
+  FaMoon,
   FaPhone,
   FaTimes,
   FaUser,
@@ -102,7 +103,7 @@ const SecondaryHeader = () => {
           >
             <FaUsers className="hidden sm:block sm:text-sm md:text-lg" />
             <span className="lg:block hidden">Mentoons Community</span>
-            <span className="absolute -top-2 -right-7 px-2 py-0.5 bg-red-500 rounded-full text-[10px]">
+            <span className="absolute -top-1/3 -left-0 -translate-x-1/5 px-2 bg-red-500 rounded-full text-[10px]">
               Join
             </span>
           </Link>
@@ -203,6 +204,16 @@ const SecondaryHeader = () => {
           <FaCreditCard className="hidden sm:block sm:text-sm md:text-lg" />
           Browse Plans
         </a>
+        <Link
+          to="/mythos"
+          className="relative bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
+        >
+          <FaMoon className="sm:text-sm md:text-lg" />
+          Mythos
+          <span className="absolute -top-1/3 -left-1/3 -translate-x-1/5 bg-red-500 rounded-full px-2 text-[10px]">
+            Introducing
+          </span>
+        </Link>
         {user && (
           <FaUser className="text-white bg-[#500EAD] rounded-full cursor-pointer p-1 md:p-2 lg:p-2 w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9" />
         )}

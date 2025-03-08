@@ -16,7 +16,7 @@ const CosmicInfluence = () => {
   return (
     <section
       ref={ref}
-      className="w-full h-auto flex flex-col md:flex-row justify-start items-center md:items-start gap-6 md:gap-10 py-10 px-4 md:px-20 bg-[#1A1D3B] bg-[url('/public/background/mythos/section/stars_background.png')] bg-center"
+      className="w-full h-auto flex flex-col md:flex-row justify-start items-center md:items-start gap-6 md:gap-10 py-10 px-4 md:px-20 bg-[#1A1D3B] bg-[url('/background/mythos/section/stars_background.png')] bg-center"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}

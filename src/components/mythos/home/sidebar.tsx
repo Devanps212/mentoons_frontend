@@ -99,9 +99,7 @@ const MythosSidebar = ({
                   >
                     <Link
                       to={
-                        item === "HOME"
-                          ? "/mythos"
-                          : `/mythos/${item.toLowerCase()}`
+                        item === "HOME" ? "/" : `/mythos/${item.toLowerCase()}`
                       }
                       className="block transition hover:text-gray-600 focus:outline-none focus:text-gray-600"
                       onClick={() => setSidebar(false)}

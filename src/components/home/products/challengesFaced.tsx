@@ -21,7 +21,7 @@ const ChallengesFaced = () => {
   ];
 
   return (
-    <section className="w-full p-10">
+    <section className="w-full p-10 py-15">
       <h1 className="text-center firasans font-medium text-4xl">
         Challenges Faced By Parents
       </h1>

@@ -17,6 +17,7 @@ import {
   MythosPlan,
   FooterLists,
 } from "./mythos/interface";
+import { ProductsInterface } from "./user/products";
 
 export type {
   UserStatusInterface,
@@ -27,6 +28,7 @@ export type {
   Color,
   Groups,
   Community,
+  ProductsInterface,
   JoinCardsProps,
   MythosCardProps,
   Comics,

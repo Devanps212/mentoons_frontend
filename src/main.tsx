@@ -5,7 +5,7 @@ import App from "./App.tsx";
 import { Provider } from "react-redux";
 import store, { persistor } from "./redux/store.ts";
 import { PersistGate } from "redux-persist/integration/react";
-import Loader from "./components/loader/loader.tsx";
+import Loader from "./components/common/loader/loader.tsx";
 import { Toaster } from "sonner";
 
 createRoot(document.getElementById("root")!).render(

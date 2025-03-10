@@ -4,32 +4,26 @@ import { Navigation, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/swiper-bundle.css";
 import useInView from "../../../customHooks/useInView";
+import { ProductsInterface } from "../../../types";
 
-const products = [
-  {
-    id: 1,
-    image: "/products/Conversation Starter Cards 6-12.png",
-    title: "Conversation Starter Cards",
-  },
-  {
-    id: 2,
-    image: "/products/Story reteller cards 6-12.png",
-    title: "Story Re-teller Cards",
-  },
-  {
-    id: 3,
-    image: "/products/Silent stories 6-12.png",
-    title: "Silent Stories",
-  },
-];
-
-const Products = () => {
+const Products = ({
+  products,
+  label,
+  bg = "#E39712",
+  text = "white",
+}: {
+  products: ProductsInterface[];
+  label: string;
+  bg?: string;
+  text?: string;
+}) => {
   const { ref, isInView } = useInView(0.3, false);
 
   return (
     <section
       ref={ref}
-      className="py-8 sm:py-10 px-4 sm:px-6 md:px-10 lg:px-20 bg-[#E39712]"
+      className="py-8 sm:py-10 px-4 sm:px-6 md:px-10 lg:px-20"
+      style={{ backgroundColor: bg }}
     >
       <motion.div
         initial={{ opacity: 0, y: -30 }}
@@ -38,10 +32,10 @@ const Products = () => {
         className="flex flex-col sm:flex-row justify-between items-center w-full mb-6 gap-4"
       >
         <h1 className="text-[#1A1D3B] font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[36px] montserrat tracking-[1.5px] sm:tracking-[2.5px] text-center sm:text-left">
-          CHECKOUT OUR OTHER PRODUCTS
+          {label}
         </h1>
         <div className="mt-2 sm:mt-0">
-          <Discover label="LEARN MORE" />
+          <Discover label="LEARN MORE" text={text} />
         </div>
       </motion.div>
       <div className="block sm:hidden">

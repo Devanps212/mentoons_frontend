@@ -5,7 +5,7 @@ import UserStatus from "../../components/adda/home/userStatus/userStatus";
 import AddPosts from "../../components/adda/home/addPosts/addPosts";
 import Posts from "../../components/adda/home/addPosts/posts/posts";
 import Influencer from "../../components/adda/home/influencer/influencer";
-import FounderNote from "../../components/home/founderNote/founderNote";
+import FounderNote from "../../components/user/home/founderNote/founderNote";
 import BottomNav from "../../components/adda/home/bottomNav/bottomNav";
 import Notification from "../../components/adda/home/notifications/notification";
 import { Link } from "react-router-dom";

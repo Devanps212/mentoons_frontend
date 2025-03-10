@@ -24,7 +24,7 @@ const MythosBanner = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-[#E39712] font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] tracking-[1.5px] sm:tracking-[1.9px] montserrat px-2"
         >
-          LET THE PLANETS GUIDE YOUR CAREER
+          LET THE PLANETS BE YOUR GUIDING STAR
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

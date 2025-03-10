@@ -5,7 +5,7 @@ import { STATUSES } from "../../../../constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { FreeMode } from "swiper/modules";
-import Status from "../../../modal/status";
+import Status from "../../../common/modal/status";
 // import axios, { AxiosError } from "axios";
 
 const UserStatus = () => {

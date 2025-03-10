@@ -1,4 +1,4 @@
-import HelperList from "../../components/helperList/helperList";
+import HelperList from "../../components/common/helperList/helperList";
 import MythosBanner from "../../components/mythos/home/banner";
 import BlogsForYou from "../../components/mythos/home/blogsForYou";
 import CosmicInfluence from "../../components/mythos/home/cosmicInfluence";

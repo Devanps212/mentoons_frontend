@@ -2,19 +2,29 @@ import { BLOGS } from "./mythos/blogs";
 import { MYTHOS_PLANS } from "./mythos/membershipPlans";
 import { PLANET, CAREER, CONTACT_INFO } from "./mythos/footer";
 import { PROBLEMS_FACED } from "./mythos/problemsFaced";
-import { COMICS, GAMES, PRODUCTS, SERVICES, SUBSCRIPTION } from "./header";
-import { ANIMATION_TEXTS_HOME, ANIMATION_TEXTS_ADDA } from "./primaryHeader";
-import { COMMUNITY } from "./community";
-import { CONSTESTS } from "./contests";
-import { FAQ } from "./faq";
-import { FREECOMICS, FREEAUDIOCOMICS } from "./freeComics";
-import { PODCAST } from "./podcast";
-import { PLATINUM, PRIME } from "./membership";
-import { FRIEND_REQUEST } from "./friendRequest";
-import { STATUSES } from "./userData";
-import { PHOTO_POST } from "./posts";
-import { PLANETS } from "./planets";
-import { JOIN } from "./joinCards";
+import {
+  COMICS,
+  GAMES,
+  PRODUCTS,
+  SERVICES,
+  SUBSCRIPTION,
+} from "./common/header";
+import {
+  ANIMATION_TEXTS_HOME,
+  ANIMATION_TEXTS_ADDA,
+} from "./common/primaryHeader";
+import { COMMUNITY } from "./user/community";
+import { CONSTESTS } from "./user/contests";
+import { FAQ } from "./adda/faq";
+import { FREECOMICS, FREEAUDIOCOMICS } from "./user/freeComics";
+import { PODCAST } from "./user/podcast";
+import { PLATINUM, PRIME } from "./user/membership";
+import { FRIEND_REQUEST } from "./adda/friendRequest";
+import { STATUSES } from "./user/userData";
+import { PHOTO_POST } from "./adda/posts";
+import { PLANETS } from "./mythos/planets";
+import { JOIN } from "./mythos/joinCards";
+import { PRODUCTS_BENEFITS } from "./user/products/productsBenefits";
 
 export {
   BLOGS,
@@ -30,6 +40,7 @@ export {
   SUBSCRIPTION,
   ANIMATION_TEXTS_HOME,
   ANIMATION_TEXTS_ADDA,
+  PRODUCTS_BENEFITS,
   COMMUNITY,
   CONSTESTS,
   FAQ,

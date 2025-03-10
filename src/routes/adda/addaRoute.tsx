@@ -1,14 +1,14 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Loader from "../../components/loader/loader";
+import Loader from "../../components/common/loader/loader";
 const Home = lazy(() => import("../../pages/adda/adda"));
 const Groups = lazy(() => import("../../pages/adda/groups"));
 
 const PrimaryHeader = lazy(
-  () => import("../../components/primaryHeader/primaryHeader")
+  () => import("../../components/common/primaryHeader/primaryHeader")
 );
 const SecondaryHeader = lazy(
-  () => import("../../components/secondaryHeader/secondaryHeader")
+  () => import("../../components/common/secondaryHeader/secondaryHeader")
 );
 
 const AddaRoute = () => {

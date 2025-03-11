@@ -32,7 +32,7 @@ const AboutMythos = () => {
       >
         <div className="relative w-full pb-[56.25%]">
           <ReactPlayer
-            url="/video/addiction/We know THE STRUGGLES our youth is facing_03.mp4"
+            url="https://res.cloudinary.com/dacwu8tri/video/upload/v1741671026/We_know_THE_STRUGGLES_our_youth_is_facing_03_ebzeuu.mp4"
             className="absolute top-0 left-0"
             width="100%"
             height="80%"

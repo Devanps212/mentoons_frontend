@@ -4,10 +4,10 @@ import { FaPlayCircle } from "react-icons/fa";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 const videos = [
-  "/cards/user/products/Conversation Starter Cards 6-12.mp4",
-  "/cards/user/products/Silent Stories (Ages 6-12)_04.mp4",
-  "/cards/user/products/Story Reteller Cards 13-19.mp4",
-  "/cards/user/products/Story Reteller Cards 6-12.mp4",
+  "https://res.cloudinary.com/dacwu8tri/video/upload/v1741670403/Story_Reteller_Cards_13-19_1_ql64ys.mp4",
+  "https://res.cloudinary.com/dacwu8tri/video/upload/v1741670480/Silent_Stories_Ages_6-12__04_1_ep8fzn.mp4",
+  "https://res.cloudinary.com/dacwu8tri/video/upload/v1741670571/Story_Reteller_Cards_6-12_1_hottxm.mp4",
+  "https://res.cloudinary.com/dacwu8tri/video/upload/v1741670298/Conversation_Starter_Cards_6-12_liitjh.mp4",
 ];
 
 const VideoAndProduct = () => {
@@ -63,14 +63,14 @@ const VideoAndProduct = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative w-full md:w-2xl lg:w-2xl"
+        className="relative w-full md:w-2xl lg:w-2xl bg-black rounded-xl overflow-hidden"
       >
         <video
           key={currentVideoIndex}
           ref={videoRef}
           src={videos[currentVideoIndex]}
           muted
-          className="w-full h-full rounded-xl"
+          className="w-full h-full"
           onClick={handlePlayPause}
         />
         {showPlayButton && (

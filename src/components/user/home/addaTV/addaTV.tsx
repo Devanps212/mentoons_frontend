@@ -21,7 +21,7 @@ const AddaTV = () => {
           playsInline
         >
           <source
-            src="/video/addiction/We know THE STRUGGLES our youth is facing_03.mp4"
+            src="https://res.cloudinary.com/dacwu8tri/video/upload/v1741671026/We_know_THE_STRUGGLES_our_youth_is_facing_03_ebzeuu.mp4"
             type="video/mp4"
           />
         </video>

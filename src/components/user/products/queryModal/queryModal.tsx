@@ -65,6 +65,7 @@ const QueryModal = ({
             className="w-full p-4 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-700 placeholder-gray-400 border-gray-200"
             placeholder={`Enter your query about ${category}`}
             value={query}
+            required
             onChange={(e) => setQuery(e.target.value)}
           />
 
@@ -73,6 +74,7 @@ const QueryModal = ({
             className="w-full p-4 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-700 placeholder-gray-400 border-gray-200"
             placeholder="your.email@example.com"
             value={email}
+            required
             onChange={(e) => setEmail(e.target.value)}
           />
 

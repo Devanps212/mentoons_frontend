@@ -24,7 +24,11 @@ import { STATUSES } from "./user/userData";
 import { PHOTO_POST } from "./adda/posts";
 import { PLANETS } from "./mythos/planets";
 import { JOIN } from "./mythos/joinCards";
-import { PRODUCTS_BENEFITS } from "./user/products/productsBenefits";
+import {
+  PRODUCTS_BENEFITS,
+  COMIC_COLOR,
+} from "./user/products/productsBenefits";
+import { ASSESSMENTS } from "./user/assessments/assessment";
 
 export {
   BLOGS,
@@ -42,7 +46,9 @@ export {
   ANIMATION_TEXTS_ADDA,
   PRODUCTS_BENEFITS,
   COMMUNITY,
+  ASSESSMENTS,
   CONSTESTS,
+  COMIC_COLOR,
   FAQ,
   FREECOMICS,
   FREEAUDIOCOMICS,

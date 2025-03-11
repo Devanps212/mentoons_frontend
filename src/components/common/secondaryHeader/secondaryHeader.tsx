@@ -219,14 +219,14 @@ const SecondaryHeader = () => {
           Browse Plans
         </a>
         <Link
-          to="#"
+          to="/workshops"
           className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
         >
           <FaChalkboard className="sm:text-sm md:text-lg" />
           Workshops
         </Link>
         <Link
-          to="#"
+          to="/assessment"
           className="bg-transparent outline-none cursor-pointer text-center text-[12px] sm:text-sm md:text-base font-semibold text-white flex items-center gap-1"
         >
           <MdAssessment className="sm:text-sm md:text-lg" />

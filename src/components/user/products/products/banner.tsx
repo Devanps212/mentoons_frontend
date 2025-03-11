@@ -2,16 +2,11 @@ import { useState } from "react";
 import useInView from "../../../../customHooks/useInView";
 import { motion } from "framer-motion";
 import QueryModal from "../queryModal/queryModal";
+import { COMIC_COLOR } from "../../../../constants";
 
 const ProductsBanner = () => {
   const { isInView, ref } = useInView(0.3, false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  const comic = {
-    "6-12": "#FCE83E",
-    "13-19": "#EF4444",
-    "20+": "#4E90FF",
-  };
 
   return (
     <>
@@ -33,7 +28,7 @@ const ProductsBanner = () => {
           Mentoons Store
         </motion.h1>
         <ul className="grid grid-cols-2 md:grid-cols-3 place-items-center gap-3 w-full max-w-3xl mt-5">
-          {Object.entries(comic).map(([key, value], index) => (
+          {Object.entries(COMIC_COLOR).map(([key, value], index) => (
             <motion.li
               key={index}
               initial={{ opacity: 0, y: 30 }}

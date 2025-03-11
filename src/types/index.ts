@@ -18,6 +18,7 @@ import {
   FooterLists,
 } from "./mythos/interface";
 import { ProductsInterface } from "./user/products";
+import { BreadCrumbs } from "./common/breadCrumbs";
 
 export type {
   UserStatusInterface,
@@ -35,5 +36,6 @@ export type {
   Membership,
   Auth,
   MythosPlan,
+  BreadCrumbs,
   GroupCards,
 };

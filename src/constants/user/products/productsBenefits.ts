@@ -18,3 +18,9 @@ export const PRODUCTS_BENEFITS = {
     "Keep kids interested and focused",
   ],
 };
+
+export const COMIC_COLOR = {
+  "6-12": "#FCE83E",
+  "13-19": "#EF4444",
+  "20+": "#4E90FF",
+};

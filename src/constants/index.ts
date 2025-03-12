@@ -29,6 +29,18 @@ import {
   COMIC_COLOR,
 } from "./user/products/productsBenefits";
 import { ASSESSMENTS } from "./user/assessments/assessment";
+import {
+  CHALLENGES_KIDS,
+  CHALLENGES_TEENS,
+  CHALLENGES_YOUTH,
+} from "./user/common/challenges/challenges";
+import {
+  BUDDY_CAMP,
+  CAREER_CORNER,
+  FAMILY_CAMP,
+  TEEN_CAMP,
+} from "./user/workshops/workshops";
+import { FAQ_PRODUCT, FAQ_WORKSHOPS } from "./user/common/faq/faq";
 
 export {
   BLOGS,
@@ -47,6 +59,8 @@ export {
   PRODUCTS_BENEFITS,
   COMMUNITY,
   ASSESSMENTS,
+  FAQ_PRODUCT,
+  FAQ_WORKSHOPS,
   CONSTESTS,
   COMIC_COLOR,
   FAQ,
@@ -60,4 +74,11 @@ export {
   PHOTO_POST,
   PLANETS,
   JOIN,
+  CHALLENGES_KIDS,
+  CHALLENGES_TEENS,
+  CHALLENGES_YOUTH,
+  BUDDY_CAMP,
+  CAREER_CORNER,
+  FAMILY_CAMP,
+  TEEN_CAMP,
 };

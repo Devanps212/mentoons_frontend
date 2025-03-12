@@ -3,20 +3,7 @@ import { motion } from "framer-motion";
 import { MdMessage } from "react-icons/md";
 import useInView from "../../../../customHooks/useInView";
 
-const ProductsFAQ = () => {
-  const faq = {
-    "What benefit will I receive from this product?":
-      "It helps you understand your emotional strengths, areas for improvement, and how your emotions impact various aspects of your life, including family, friendships, and career.",
-    "What types of topics can I discuss here?":
-      "We offer workshops on a wide range of topics, including career guidance, personal development, and social skills. You can find detailed information about each workshop on our website or mobile app.",
-    "What activities are done in workshops?":
-      "Our workshops include interactive group discussions, peer learning activities, practical workshops, and expert guidance sessions. Each workshop is designed to be engaging and informative, with a focus on skill-building and personal development.",
-    "How do I engage with other users?":
-      "You can engage with other users by participating in group discussions, sharing your thoughts and experiences, and asking questions. You can also connect with other users through private messages and group chats.",
-    "Can experts contribute to the platform?":
-      "Yes, we welcome contributions from experts in various fields. If you are an expert and would like to share your knowledge and insights with our community, please contact us for more information.",
-  };
-
+const FAQ = ({ data }: { data: object }) => {
   const { isInView, ref } = useInView(0.3, false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -30,7 +17,7 @@ const ProductsFAQ = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full h-auto px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-10 md:py-15"
+      className="h-auto px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-10 md:py-15"
     >
       <motion.h1
         initial={{ opacity: 0, x: -30 }}
@@ -43,7 +30,7 @@ const ProductsFAQ = () => {
 
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 w-full mt-6 sm:mt-10">
         <div className="flex flex-col w-full lg:w-3/5 gap-4 sm:gap-5">
-          {Object.entries(faq).map(([question, answer], index) => (
+          {Object.entries(data).map(([question, answer], index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -125,4 +112,4 @@ const ProductsFAQ = () => {
   );
 };
 
-export default ProductsFAQ;
+export default FAQ;

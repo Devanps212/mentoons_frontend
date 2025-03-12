@@ -1,21 +1,18 @@
 import { motion } from "framer-motion";
+import { COMIC_COLOR } from "../../../constants";
 
 const AgeButton = ({
-  age,
   isInView,
   setSelectedCategory,
   className,
 }: {
-  age: object;
   isInView: boolean;
   setSelectedCategory: (val: string) => void;
   className: string;
 }) => {
   return (
-    <ul
-      className={`${className} grid grid-cols-2 md:grid-cols-3 place-items-center gap-3 w-full max-w-3xl mt-5`}
-    >
-      {Object.entries(age).map(([key, value], index) => (
+    <ul className={className}>
+      {Object.entries(COMIC_COLOR).map(([key, value], index) => (
         <motion.li
           key={index}
           initial={{ opacity: 0, y: 30 }}

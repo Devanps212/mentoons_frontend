@@ -44,7 +44,7 @@ const VideoAndProduct = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full p-6 md:p-10 flex flex-col lg:flex-row justify-evenly items-center gap-6 bg-gradient-to-b from-[#FFE18B] to-[#F7941D]"
+      className="p-6 md:p-10 flex flex-col lg:flex-row justify-evenly items-center gap-6 bg-gradient-to-b from-[#FFE18B] to-[#F7941D]"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}

@@ -1,7 +1,7 @@
 export const ASSESSMENTS = [
   {
     img: "/cards/mythos/about/problemsFaced/deep dark fantasies.png",
-    title: "Self Awareness Assessment",
+    title: "Exercise Awareness Assessment",
     description:
       "Discover your current state of mind, self-conduct, family values, willingness to change, and spiritual journey.",
     details: {
@@ -48,4 +48,3 @@ export const ASSESSMENTS = [
     price: 10,
   },
 ];
-

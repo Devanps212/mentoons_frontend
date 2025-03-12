@@ -8,6 +8,7 @@ import {
   Membership,
   GroupCards,
 } from "./interfaces";
+import { Challenges } from "./common/challenges";
 import { Auth } from "./auth/interface";
 import { Color } from "./types";
 import { Groups } from "./groups/groups";
@@ -19,6 +20,7 @@ import {
 } from "./mythos/interface";
 import { ProductsInterface } from "./user/products";
 import { BreadCrumbs } from "./common/breadCrumbs";
+import { Workshops } from "./user/workshops";
 
 export type {
   UserStatusInterface,
@@ -27,6 +29,7 @@ export type {
   DropDownInterface,
   FooterLists,
   Color,
+  Workshops,
   Groups,
   Community,
   ProductsInterface,
@@ -34,6 +37,7 @@ export type {
   MythosCardProps,
   Comics,
   Membership,
+  Challenges,
   Auth,
   MythosPlan,
   BreadCrumbs,

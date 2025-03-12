@@ -1,9 +1,10 @@
 import ProductsBanner from "../../components/user/products/products/banner";
 import ProductsBenefits from "../../components/user/products/products/benefits";
-import ChallengesFaced from "../../components/user/products/products/challengesFaced";
+import ChallengesFaced from "../../components/common/challenges/challenges";
 import VideoAndProduct from "../../components/user/products/products/videoAndProduct";
 import Products from "../../components/mythos/about/products";
-import ProductsFAQ from "../../components/user/products/faq/faq";
+import FAQ from "../../components/user/products/faq/faq";
+import { FAQ_PRODUCT } from "../../constants";
 
 const products = () => {
   const productsItems = [
@@ -36,7 +37,7 @@ const products = () => {
         text="black"
       />
       <ProductsBenefits />
-      <ProductsFAQ />
+      <FAQ data={FAQ_PRODUCT} />
     </>
   );
 };

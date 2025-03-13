@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import CareerCorner from "../../components/user/workshops/careerCorner";
 import Hero from "../../components/user/workshops/hero";
 import {
@@ -19,10 +20,16 @@ import WorkShopsMatter from "../../components/user/workshops/workShopsMatter";
 import RegisterWorkshop from "../../components/user/workshops/register";
 import FAQ from "../../components/user/products/faq/faq";
 
+const fadeInVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const Workshops = () => {
   const [workshop, setWorkshop] = useState<
     "buddy" | "teen" | "family" | "career"
   >("career");
+
   const careerCornerRef = useRef<HTMLDivElement>(null);
   const [isFirstRender, setIsFirstRender] = useState(true);
 
@@ -53,17 +60,47 @@ const Workshops = () => {
   return (
     <>
       <Hero setWorkshop={setWorkshop} />
-      <div ref={careerCornerRef} className={workshopData.bg}>
+      <motion.div
+        ref={careerCornerRef}
+        className={workshopData.bg}
+        initial="hidden"
+        animate="visible"
+        variants={fadeInVariants}
+      >
         <CareerCorner workshopData={workshopData} />
         <WhatToExpect
           expectations={workshopData.expectations}
           label={workshop}
         />
         <ChallengesFaced challenges={challengeData} label={label} />
-      </div>
-      <WorkShopsMatter matter={workshopData.workshopMatter} />
-      <RegisterWorkshop registerData={workshopData.registerImg} label={label} />
-      <FAQ data={FAQ_WORKSHOPS} />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInVariants}
+        viewport={{ once: true }}
+      >
+        <WorkShopsMatter matter={workshopData.workshopMatter} />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInVariants}
+        viewport={{ once: true }}
+      >
+        <RegisterWorkshop
+          registerData={workshopData.registerImg}
+          label={workshop}
+        />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInVariants}
+        viewport={{ once: true }}
+      >
+        <FAQ data={FAQ_WORKSHOPS} />
+      </motion.div>
     </>
   );
 };

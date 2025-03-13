@@ -34,7 +34,7 @@ const MythosButton = ({
       )}
 
       <span
-        className="font-extrabold text-xs sm:text-sm tracking-[1px] sm:tracking-[1.3px]"
+        className="font-extrabold text-xs sm:text-sm tracking-[1px] sm:tracking-[1.3px] mulish"
         style={{ color: textClr }}
       >
         {label}

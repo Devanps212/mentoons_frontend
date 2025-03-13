@@ -2,7 +2,7 @@ import HelperList from "../../components/common/helperList/helperList";
 import AboutMythos from "../../components/mythos/about/aboutMythos";
 import MythosFAQ from "../../components/mythos/about/faq";
 import KnowAboutUs from "../../components/mythos/about/knowAboutUs";
-import ProblemFaced from "../../components/mythos/about/problemFaced";
+import ProblemFaced from "../../components/mythos/home/problemFaced";
 import Products from "../../components/mythos/about/products";
 
 const MythosAbout = () => {

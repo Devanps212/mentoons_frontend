@@ -1,7 +1,8 @@
 import AssessmentCards from "../../components/user/assessment/assessmentCards";
 import DiscoverYourself from "../../components/user/assessment/discoverYourself";
 import SampleReport from "../../components/user/assessment/sampleRepoert";
-import ProductsFAQ from "../../components/user/products/faq/faq";
+import FAQ from "../../components/user/products/faq/faq";
+import { FAQ_PRODUCT } from "../../constants";
 
 const Assessment = () => {
   return (
@@ -9,7 +10,7 @@ const Assessment = () => {
       <DiscoverYourself />
       <SampleReport />
       <AssessmentCards />
-      <ProductsFAQ />
+      <FAQ data={FAQ_PRODUCT} />
     </>
   );
 };

@@ -12,7 +12,7 @@ const SignUpSection = () => {
       <motion.img
         src="/background/mythos/signUp/Circle 2.png"
         alt="circle-1"
-        className="hidden sm:block absolute -top-[20%] left-40 w-[420px] h-[450px]"
+        className="hidden sm:block absolute -top-[20%] left-40 w-[420px] h-[450px] z-0"
         initial={{ scale: 0, rotate: 180 }}
         animate={isInView ? { scale: 1, rotate: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -20,7 +20,7 @@ const SignUpSection = () => {
       <motion.img
         src="/background/mythos/signUp/Circle.png"
         alt="circle-2"
-        className="hidden sm:block absolute -bottom-[20%] left-40 w-[420px] h-[450px]"
+        className="hidden sm:block absolute -bottom-[20%] left-40 w-[420px] h-[450px] z-0"
         initial={{ scale: 0, rotate: -180 }}
         animate={isInView ? { scale: 1, rotate: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -28,7 +28,7 @@ const SignUpSection = () => {
       <motion.img
         src="/background/mythos/signUp/Star.png"
         alt="star-1"
-        className="hidden sm:block absolute top-1/2 left-70 w-15 h-15"
+        className="hidden sm:block absolute top-1/2 left-70 w-15 h-15 z-0"
         initial={{ opacity: 0, scale: 0 }}
         animate={isInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.4 }}
@@ -36,7 +36,7 @@ const SignUpSection = () => {
       <motion.img
         src="/background/mythos/signUp/Star.png"
         alt="star-2"
-        className="hidden sm:block absolute top-50 left-85 w-15 h-15"
+        className="hidden sm:block absolute top-50 left-85 w-15 h-15 z-0"
         initial={{ opacity: 0, scale: 0 }}
         animate={isInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.5 }}
@@ -44,7 +44,7 @@ const SignUpSection = () => {
       <motion.img
         src="/background/mythos/signUp/Star.png"
         alt="star-3"
-        className="hidden sm:block absolute top-1/2 left-100 w-15 h-15"
+        className="hidden sm:block absolute top-1/2 left-100 w-15 h-15 z-0"
         initial={{ opacity: 0, scale: 0 }}
         animate={isInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.6 }}

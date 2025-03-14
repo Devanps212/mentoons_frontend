@@ -1,69 +1,96 @@
-import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/swiper-bundle.css";
 import Discover from "./learnMore";
 import { BLOGS } from "../../../constants";
+import { motion } from "framer-motion";
+import { News } from "../../../constants";
 import useInView from "../../../customHooks/useInView";
 
 const BlogsForYou = () => {
-  const { ref, isInView } = useInView(0.3, false);
+  const { isInView, ref } = useInView(0.3, false);
 
   return (
-    <section
-      ref={ref}
-      className="relative w-full p-20 px-5 sm:px-10 md:px-20 bg-[#1A1D3B] overflow-hidden"
-    >
-      <div className="absolute w-[200%] h-3/4 -bottom-1/3 -left-1/2 bg-gradient-to-b from-[#DBF77E] via-[#4C19E8] to-[#250A85] rounded-[50%] blur-[100px] opacity-40"></div>
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="flex justify-between items-center relative z-10"
-      >
-        <div>
-          <h1 className="montserrat font-semibold text-2xl sm:text-4xl tracking-[2.5px] text-[#E39712]">
-            BLOGS FOR YOU
-          </h1>
-        </div>
-        <Discover label="LEARN MORE" />
-      </motion.div>
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        spaceBetween={10}
-        slidesPerView={1}
-        loop={true}
-        className="rounded-lg mt-5"
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-          },
-        }}
-      >
-        {BLOGS.map((blog, index) => (
-          <SwiperSlide key={index} className="flex justify-center">
+    <section ref={ref} className="px-4 sm:px-8 md:px-30 py-10 bg-[#1A1D3B]">
+      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-6 text-center md:text-left">
+        <motion.h1
+          className="text-[#E39712] montserrat font-semibold text-2xl sm:text-3xl md:text-4xl max-w-xl leading-tight md:leading-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          Expand Your Knowledge With Our Exclusive Blog-Content
+        </motion.h1>
+
+        <motion.div
+          className="shrink-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={
+            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+          }
+          transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+        >
+          <Discover label="LEARN MORE" />
+        </motion.div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row justify-between mt-10 gap-8">
+        <div
+          ref={ref}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full lg:w-3/5"
+        >
+          {BLOGS.map((blog, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="p-6 w-full space-y-5"
+              className="w-full max-w-[350px] mx-auto h-fit space-y-1"
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={
+                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+              }
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <img
-                src="/cards/mythos/blogs/shakeHands.png"
+                src={blog.img}
                 alt="blog-post1"
-                className="w-full h-1/2 object-cover"
+                className="w-full h-auto object-cover rounded-xl"
               />
               <span className="text-[#9FE9FF] font-semibold text-md sm:text-sm md:text-base montserrat">
                 {blog.date}
               </span>
-              <h1 className="mt-1 cormorant font-semibold text-3xl sm:text-lg md:text-xl lg:text-3xl text-white">
+              <h1 className="mt-1 cormorant font-semibold text-xl sm:text-lg md:text-xl lg:text-xl text-white">
                 {blog.name}
               </h1>
               <Discover label="READ MORE" />
             </motion.div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          ))}
+        </div>
+
+        <motion.div
+          className="bg-[#6A8FFF] space-y-5 p-5 w-full lg:w-1/3 max-h-[550px] overflow-y-auto"
+          initial={{ x: 50, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          {News.map((data, index) => (
+            <div
+              className="w-full lg:max-w-2xs mx-auto lg:mx-0 p-3"
+              key={index}
+            >
+              <div className="flex justify-center items-center w-full jost font-semibold text-xs">
+                <h1 className="bg-white whitespace-nowrap z-10 pr-3">
+                  {data.category}
+                </h1>
+                <div className="flex-grow border-t border-gray-900"></div>
+                <span className="bg-white text-gray-600 whitespace-nowrap px-3">
+                  {data.date}
+                </span>
+                <div className="w-[30px] border-t border-gray-900"></div>
+              </div>
+              <h1 className="outfit font-semibold text-lg text-[#111111] mt-3">
+                {data.news}
+              </h1>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 };

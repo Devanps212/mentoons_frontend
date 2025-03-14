@@ -21,15 +21,18 @@ import {
 import { ProductsInterface } from "./user/products";
 import { BreadCrumbs } from "./common/breadCrumbs";
 import { Workshops } from "./user/workshops";
+import { CountryOption, Country } from "./mythos/types";
 
 export type {
   UserStatusInterface,
   RequestInterface,
   GameData,
+  CountryOption,
   DropDownInterface,
   FooterLists,
   Color,
   Workshops,
+  Country,
   Groups,
   Community,
   ProductsInterface,

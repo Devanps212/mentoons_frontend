@@ -1,13 +1,19 @@
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
+import useInView from "../../../customHooks/useInView";
 
 const AboutMythos = () => {
+  const { ref, isInView } = useInView(0.3, false);
+
   return (
-    <section className="p-6 md:p-16 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-14 lg:gap-20 bg-[#1A1D3B] bg-[url('/background/mythos/section/stars_background.png')] bg-center">
+    <section
+      ref={ref}
+      className="p-6 md:p-16 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-14 lg:gap-20 bg-[#1A1D3B] bg-[url('/background/mythos/section/stars_background.png')] bg-center"
+    >
       <div className="w-full md:w-1/2 lg:w-lg space-y-6 md:space-y-10">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-[#E39712] font-semibold text-2xl sm:text-3xl md:text-4xl tracking-wide montserrat"
         >
@@ -15,7 +21,9 @@ const AboutMythos = () => {
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={
+            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+          }
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           className="mulish text-sm sm:text-base md:text-lg lg:text-xl text-white text-start text-justify max-w-full"
         >
@@ -27,7 +35,9 @@ const AboutMythos = () => {
       </div>
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={
+          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+        }
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         className="w-full md:w-1/2 flex justify-center"
       >
@@ -38,7 +48,7 @@ const AboutMythos = () => {
             width="100%"
             height="100%"
             controls
-            playing={false}
+            playing={isInView}
             config={{
               file: {
                 attributes: {

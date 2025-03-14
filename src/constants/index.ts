@@ -1,4 +1,4 @@
-import { BLOGS } from "./mythos/blogs";
+import { BLOGS, News } from "./mythos/blogs";
 import { MYTHOS_PLANS } from "./mythos/membershipPlans";
 import { PLANET, CAREER, CONTACT_INFO } from "./mythos/footer";
 import { PROBLEMS_FACED } from "./mythos/problemsFaced";
@@ -44,6 +44,7 @@ import { FAQ_PRODUCT, FAQ_WORKSHOPS } from "./user/common/faq/faq";
 
 export {
   BLOGS,
+  News,
   MYTHOS_PLANS,
   PLANET,
   CAREER,

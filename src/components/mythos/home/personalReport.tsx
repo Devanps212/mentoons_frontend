@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import useInView from "../../../customHooks/useInView";
 import MythosButton from "./button";
+import { useState } from "react";
+import MythosLoginModal from "../../common/modal/mythosLogin";
 
 const PersonalReport = () => {
   const { ref, isInView } = useInView(0.3, false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section
@@ -69,10 +72,12 @@ const PersonalReport = () => {
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex justify-center md:justify-start"
+          onClick={() => setIsOpen(true)}
         >
           <MythosButton label="VIEW SAMPLE REPORT" />
         </motion.div>
       </motion.div>
+      {isOpen && <MythosLoginModal set={setIsOpen} />}
     </section>
   );
 };
